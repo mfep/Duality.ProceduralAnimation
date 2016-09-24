@@ -1,0 +1,41 @@
+# Duality gitignore
+
+# Directories
+.git
+.vs
+Backup
+Source/Code/**/bin/
+Source/Code/**/obj/
+Source/Code/packages
+Source/Packages
+Source/Media
+Plugins
+
+#Files
+Data/WorkingFolderIcon.ico
+
+# File extensions
+*.dll
+*.pdb
+*.xml
+*.XML
+*.chm
+*.exe
+*.config
+*.txt
+*.cache
+*.chw
+*.ini
+*.nupkg
+
+# Files included
+!Duality.dll
+!DualityEditor.exe
+!DualityEditor.exe.config
+!DualityPrimitives.dll
+!NuGet.Core.dll
+!PackageConfig.xml
+!VistaBridgeLibrary.dll
+!Windows7.DesktopIntegration.dll
+!packages.config
+!keyMapping.xml
