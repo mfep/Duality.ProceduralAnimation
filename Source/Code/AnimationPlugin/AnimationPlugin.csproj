@@ -59,14 +59,15 @@
   <ItemGroup>
     <Compile Include="AnimBuilder.cs" />
     <Compile Include="AnimationPlayer.cs" />
-    <Compile Include="AnimPieces\LinearColor.cs" />
-    <Compile Include="AnimPieces\LinearMovement.cs" />
+    <Compile Include="AnimPieces\SimpleColor.cs" />
+    <Compile Include="AnimPieces\SimpleMovement.cs" />
     <Compile Include="AnimPieces\PathFollowMovement.cs" />
     <Compile Include="AnimPieces\Wait.cs" />
     <Compile Include="IAnimPiece.cs" />
     <Compile Include="AnimResource.cs" />
     <Compile Include="CorePlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <PropertyGroup>

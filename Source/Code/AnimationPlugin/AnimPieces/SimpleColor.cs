@@ -4,10 +4,11 @@ using Duality.Components.Renderers;
 
 namespace MFEP.Duality.Plugins.Animation.AnimPieces
 {
-	public class LinearColor : IAnimPiece
+	public class SimpleColor : IAnimPiece
 	{
 		public ColorRgba StartColor { get; set; }
 		public ColorRgba EndColor { get; set; }
+		public bool Smoothing { get; set; }
 
 		public void Initialize ()
 		{			
@@ -15,7 +16,7 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 
 		public void Tick (float percent, GameObject gameObject)
 		{
-			ColorRgba newColor = ColorRgba.Lerp (StartColor, EndColor, percent);
+			ColorRgba newColor = ColorRgba.Lerp (StartColor, EndColor, Smoothing ? Utilities.Smoothstep (percent) : percent);
 
 			var renderer = gameObject.GetComponent<SpriteRenderer> ();
 			if (renderer == null) {

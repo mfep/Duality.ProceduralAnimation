@@ -17,7 +17,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 					}, 2.0f)
 
 				.AddSingle (
-					new LinearMovement { StartPos = new Vector2 (0, 0), EndPos = new Vector2 (500, 500) }, 3.0f
+					new SimpleMovement { StartPos = new Vector2 (0, 0), EndPos = new Vector2 (500, 500) }, 3.0f
 				)
 
 				.AddSingle (
@@ -29,7 +29,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 				.AddSingle (new Wait (), 3.0f)
 
 				.AddSingle (
-					new LinearMovement { StartPos = new Vector2 (1000, 2000), EndPos = new Vector2 (0,0)}, 2.0f
+					new SimpleMovement { StartPos = new Vector2 (1000, 2000), EndPos = new Vector2 (0,0)}, 2.0f
 				);
 		}
 	}
