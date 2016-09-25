@@ -155,7 +155,7 @@
               <contentPath dataType="String">Data\AnimResourceSample.AnimResourceSample.res</contentPath>
             </_x003C_Animation_x003E_k__BackingField>
             <_x003C_AutoPlay_x003E_k__BackingField dataType="Bool">true</_x003C_AutoPlay_x003E_k__BackingField>
-            <_x003C_Looping_x003E_k__BackingField dataType="Bool">false</_x003C_Looping_x003E_k__BackingField>
+            <_x003C_Looping_x003E_k__BackingField dataType="Bool">true</_x003C_Looping_x003E_k__BackingField>
             <_x003C_PlaybackRate_x003E_k__BackingField dataType="Float">1</_x003C_PlaybackRate_x003E_k__BackingField>
             <active dataType="Bool">true</active>
             <animStartTime dataType="Struct" type="System.TimeSpan" />

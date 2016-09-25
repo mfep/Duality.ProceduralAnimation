@@ -15,7 +15,7 @@ namespace MFEP.Duality.Plugins.Animation
 			get
 			{
 				if (Animation == null) return 0.0f;
-				return Animation.Res?.OriginalLength * PlaybackRate ?? 0.0f;
+				return Animation.Res?.OriginalLength / PlaybackRate ?? 0.0f;
 			}
 		}
 
