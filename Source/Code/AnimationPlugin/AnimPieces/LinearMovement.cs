@@ -1,6 +1,6 @@
 ﻿using Duality;
 
-namespace ProceduralAnimation.AnimPieces
+namespace MFEP.Duality.Plugins.Animation.AnimPieces
 {
 	public class LinearMovement : IAnimPiece
 	{

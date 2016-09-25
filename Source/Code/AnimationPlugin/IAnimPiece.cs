@@ -1,7 +1,7 @@
 ﻿using System;
 using Duality;
 
-namespace ProceduralAnimation
+namespace MFEP.Duality.Plugins.Animation
 {
 	public interface IAnimPiece
 	{

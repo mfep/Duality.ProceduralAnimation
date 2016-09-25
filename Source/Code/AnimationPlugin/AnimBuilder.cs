@@ -3,7 +3,7 @@ using Duality;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ProceduralAnimation
+namespace MFEP.Duality.Plugins.Animation
 {
 	public sealed class AnimBuilder
 	{

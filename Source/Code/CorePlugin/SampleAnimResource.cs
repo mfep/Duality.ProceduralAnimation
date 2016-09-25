@@ -1,8 +1,8 @@
 ﻿using System;
 using Duality;
-using ProceduralAnimation.AnimPieces;
+using MFEP.Duality.Plugins.Animation.AnimPieces;
 
-namespace ProceduralAnimation.Sample
+namespace MFEP.Duality.Plugins.Animation.Sample
 {
 	public class AnimResourceSample : AnimResource
 	{

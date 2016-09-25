@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Duality;
 
-namespace ProceduralAnimation
+namespace MFEP.Duality.Plugins.Animation
 {
 	public abstract class AnimResource : Resource
 	{

@@ -5,7 +5,7 @@ using System.Text;
 
 using Duality;
 
-namespace ProceduralAnimation
+namespace MFEP.Duality.Plugins.Animation
 {
 	/// <summary>
 	/// Defines a Duality core plugin.
