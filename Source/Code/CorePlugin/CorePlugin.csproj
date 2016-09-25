@@ -59,7 +59,7 @@
   <ItemGroup>
     <Compile Include="CorePlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SampleAnimResource.cs" />
+    <Compile Include="LinearMovementSample.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AnimationPlugin\AnimationPlugin.csproj">

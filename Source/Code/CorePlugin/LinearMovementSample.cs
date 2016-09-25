@@ -4,7 +4,7 @@ using MFEP.Duality.Plugins.Animation.AnimPieces;
 
 namespace MFEP.Duality.Plugins.Animation.Sample
 {
-	public class AnimResourceSample : AnimResource
+	public class LinearMovementSample : AnimResource
 	{
 		protected override AnimBuilder InitializePieces ()
 		{

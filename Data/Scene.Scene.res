@@ -152,7 +152,7 @@
           </item>
           <item dataType="Struct" type="MFEP.Duality.Plugins.Animation.AnimationPlayer" id="3028481768">
             <_x003C_Animation_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[MFEP.Duality.Plugins.Animation.AnimResource]]">
-              <contentPath dataType="String">Data\AnimResourceSample.AnimResourceSample.res</contentPath>
+              <contentPath dataType="String">Data\LinearMovementSample.LinearMovementSample.res</contentPath>
             </_x003C_Animation_x003E_k__BackingField>
             <_x003C_AutoPlay_x003E_k__BackingField dataType="Bool">true</_x003C_AutoPlay_x003E_k__BackingField>
             <_x003C_Looping_x003E_k__BackingField dataType="Bool">true</_x003C_Looping_x003E_k__BackingField>
