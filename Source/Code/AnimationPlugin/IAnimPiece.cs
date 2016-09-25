@@ -1,5 +1,4 @@
-﻿using System;
-using Duality;
+﻿using Duality;
 
 namespace MFEP.Duality.Plugins.Animation
 {

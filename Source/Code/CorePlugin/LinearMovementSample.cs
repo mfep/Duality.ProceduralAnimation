@@ -1,5 +1,4 @@
-﻿using System;
-using Duality;
+﻿using Duality;
 using MFEP.Duality.Plugins.Animation.AnimPieces;
 
 namespace MFEP.Duality.Plugins.Animation.Sample
