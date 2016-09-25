@@ -24,6 +24,7 @@ namespace MFEP.Duality.Plugins.Animation
 		public AnimBuilder AddSingleAnimPiece (IAnimPiece piece, float time)
 		{
 			CheckTime (time);
+			piece.Initialize ();
 			pieceList.Add (new AnimPieceWrapper { Pieces = new IAnimPiece[] { piece }, Time = time });
 			OverallTime += time;
 			return this;
@@ -32,6 +33,7 @@ namespace MFEP.Duality.Plugins.Animation
 		public AnimBuilder AddParalellAnimPieces (IAnimPiece[] pieces, float time)
 		{
 			CheckTime (time);
+			foreach (var piece in pieces) piece.Initialize ();
 			pieceList.Add (new AnimPieceWrapper { Pieces = pieces, Time = time });
 			OverallTime += time;
 			return this;

@@ -11,5 +11,7 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 		{
 			gameObject.Transform.MoveTo (Vector2.Lerp (StartPos, EndPos, percent));
 		}
+
+		public void Initialize () { }
 	}
 }

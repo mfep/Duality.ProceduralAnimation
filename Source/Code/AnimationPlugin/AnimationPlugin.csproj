@@ -60,6 +60,7 @@
     <Compile Include="AnimBuilder.cs" />
     <Compile Include="AnimationPlayer.cs" />
     <Compile Include="AnimPieces\LinearMovement.cs" />
+    <Compile Include="AnimPieces\PathFollowMovement.cs" />
     <Compile Include="IAnimPiece.cs" />
     <Compile Include="AnimResource.cs" />
     <Compile Include="CorePlugin.cs" />
