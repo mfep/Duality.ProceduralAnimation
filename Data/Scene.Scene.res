@@ -108,20 +108,6 @@
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2083362085">
         <_items dataType="Array" type="Duality.Component[]" id="3433033366" length="4">
-          <item dataType="Struct" type="ProceduralAnimation.AnimationPlayer" id="3727802167">
-            <_x003C_Animation_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[ProceduralAnimation.AnimResource]]">
-              <contentPath dataType="String">Data\AnimResourceSample.AnimResourceSample.res</contentPath>
-            </_x003C_Animation_x003E_k__BackingField>
-            <_x003C_AutoPlay_x003E_k__BackingField dataType="Bool">true</_x003C_AutoPlay_x003E_k__BackingField>
-            <_x003C_Looping_x003E_k__BackingField dataType="Bool">true</_x003C_Looping_x003E_k__BackingField>
-            <_x003C_PlaybackRate_x003E_k__BackingField dataType="Float">1</_x003C_PlaybackRate_x003E_k__BackingField>
-            <active dataType="Bool">true</active>
-            <animStartTime dataType="Struct" type="System.TimeSpan">
-              <_ticks dataType="Long">32119511</_ticks>
-            </animStartTime>
-            <gameobj dataType="ObjectRef">649790727</gameobj>
-            <isPlaying dataType="Bool">false</isPlaying>
-          </item>
           <item dataType="Struct" type="Duality.Components.Transform" id="3010105659">
             <active dataType="Bool">true</active>
             <angle dataType="Float">0</angle>
@@ -164,22 +150,34 @@
             </sharedMat>
             <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
           </item>
+          <item dataType="Struct" type="MFEP.Duality.Plugins.Animation.AnimationPlayer" id="3028481768">
+            <_x003C_Animation_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[MFEP.Duality.Plugins.Animation.AnimResource]]">
+              <contentPath dataType="String">Data\AnimResourceSample.AnimResourceSample.res</contentPath>
+            </_x003C_Animation_x003E_k__BackingField>
+            <_x003C_AutoPlay_x003E_k__BackingField dataType="Bool">true</_x003C_AutoPlay_x003E_k__BackingField>
+            <_x003C_Looping_x003E_k__BackingField dataType="Bool">false</_x003C_Looping_x003E_k__BackingField>
+            <_x003C_PlaybackRate_x003E_k__BackingField dataType="Float">1</_x003C_PlaybackRate_x003E_k__BackingField>
+            <active dataType="Bool">true</active>
+            <animStartTime dataType="Struct" type="System.TimeSpan" />
+            <gameobj dataType="ObjectRef">649790727</gameobj>
+            <isPlaying dataType="Bool">false</isPlaying>
+          </item>
         </_items>
         <_size dataType="Int">3</_size>
-        <_version dataType="Int">3</_version>
+        <_version dataType="Int">5</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3592823144" surrogate="true">
         <header />
         <body>
           <keys dataType="Array" type="System.Object[]" id="1862598607">
-            <item dataType="Type" id="567916590" value="ProceduralAnimation.AnimationPlayer" />
             <item dataType="ObjectRef">3059840228</item>
-            <item dataType="Type" id="2581177546" value="Duality.Components.Renderers.SpriteRenderer" />
+            <item dataType="Type" id="567916590" value="Duality.Components.Renderers.SpriteRenderer" />
+            <item dataType="Type" id="2581177546" value="MFEP.Duality.Plugins.Animation.AnimationPlayer" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="310236768">
-            <item dataType="ObjectRef">3727802167</item>
             <item dataType="ObjectRef">3010105659</item>
             <item dataType="ObjectRef">2291957295</item>
+            <item dataType="ObjectRef">3028481768</item>
           </values>
         </body>
       </compMap>

@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimBuilder.cs" />
-    <Compile Include="AnimComponent.cs" />
+    <Compile Include="AnimationPlayer.cs" />
     <Compile Include="AnimPieces\LinearMovement.cs" />
     <Compile Include="IAnimPiece.cs" />
     <Compile Include="AnimResource.cs" />
