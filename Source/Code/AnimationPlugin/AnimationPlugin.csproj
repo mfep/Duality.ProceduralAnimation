@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="AnimBuilder.cs" />
     <Compile Include="AnimationPlayer.cs" />
+    <Compile Include="AnimPieces\LinearColor.cs" />
     <Compile Include="AnimPieces\LinearMovement.cs" />
     <Compile Include="AnimPieces\PathFollowMovement.cs" />
     <Compile Include="AnimPieces\Wait.cs" />
