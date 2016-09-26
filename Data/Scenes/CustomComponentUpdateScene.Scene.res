@@ -107,7 +107,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2083362085">
-        <_items dataType="Array" type="Duality.Component[]" id="3433033366" length="4">
+        <_items dataType="Array" type="Duality.Component[]" id="3433033366">
           <item dataType="Struct" type="Duality.Components.Transform" id="3010105659">
             <active dataType="Bool">true</active>
             <angle dataType="Float">0</angle>
@@ -152,19 +152,24 @@
           </item>
           <item dataType="Struct" type="MFEP.Duality.Plugins.Animation.AnimationPlayer" id="3028481768">
             <_x003C_Animation_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[MFEP.Duality.Plugins.Animation.AnimResource]]">
-              <contentPath dataType="String">Data\LinearMovementSample.LinearMovementSample.res</contentPath>
+              <contentPath dataType="String">Data\Animation Resource Samples\CustomComponentUpdateSample.CustomComponentUpdateSample.res</contentPath>
             </_x003C_Animation_x003E_k__BackingField>
             <_x003C_AutoPlay_x003E_k__BackingField dataType="Bool">true</_x003C_AutoPlay_x003E_k__BackingField>
             <_x003C_Looping_x003E_k__BackingField dataType="Bool">true</_x003C_Looping_x003E_k__BackingField>
             <_x003C_PlaybackRate_x003E_k__BackingField dataType="Float">1</_x003C_PlaybackRate_x003E_k__BackingField>
+            <accAnimPercent dataType="Float">0</accAnimPercent>
             <active dataType="Bool">true</active>
             <animStartTime dataType="Struct" type="System.TimeSpan" />
             <gameobj dataType="ObjectRef">649790727</gameobj>
             <isPlaying dataType="Bool">false</isPlaying>
           </item>
+          <item dataType="Struct" type="MFEP.Duality.Plugins.Animation.Sample.WritePercentComp" id="1226815462">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">649790727</gameobj>
+          </item>
         </_items>
-        <_size dataType="Int">3</_size>
-        <_version dataType="Int">7</_version>
+        <_size dataType="Int">4</_size>
+        <_version dataType="Int">6</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3592823144" surrogate="true">
         <header />
@@ -173,11 +178,13 @@
             <item dataType="ObjectRef">3059840228</item>
             <item dataType="Type" id="567916590" value="Duality.Components.Renderers.SpriteRenderer" />
             <item dataType="Type" id="2581177546" value="MFEP.Duality.Plugins.Animation.AnimationPlayer" />
+            <item dataType="Type" id="2111865246" value="MFEP.Duality.Plugins.Animation.Sample.WritePercentComp" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="310236768">
             <item dataType="ObjectRef">3010105659</item>
             <item dataType="ObjectRef">2291957295</item>
             <item dataType="ObjectRef">3028481768</item>
+            <item dataType="ObjectRef">1226815462</item>
           </values>
         </body>
       </compMap>
