@@ -6,8 +6,10 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 	{
 		public Vector2[] PathVertices { get; set; }
 		public bool ConstantVelocity { get; set; }
+        public bool Relative { get; set; }
 
 		private Segment[] segments;
+        private Vector2 lastPos;
 
 		public void Tick (float percent, GameObject gameObject)
 		{
@@ -16,7 +18,12 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 				if (percent < currSegment.EndPercent) {
 					var currPercent = (percent - currSegment.StartPercent) / (currSegment.EndPercent - currSegment.StartPercent);
 					var pos = Vector2.Lerp (currSegment.StartPos, currSegment.EndPos, currPercent);
-					gameObject.Transform.MoveTo (pos);
+                    if (Relative) {
+                        gameObject.Transform?.MoveBy (pos - lastPos);
+                        lastPos = pos;
+                    } else {
+                        gameObject.Transform?.MoveTo (pos);
+                    }					
 					break;
 				}
 			}

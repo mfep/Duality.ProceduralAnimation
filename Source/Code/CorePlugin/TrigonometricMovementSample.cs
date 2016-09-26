@@ -10,9 +10,10 @@ namespace MFEP.Duality.Plugins.Animation.Sample
         protected override AnimBuilder InitializePieces ()
         {
             return AnimBuilder.Start ()
-                .AddSingle (
-                    new TrigonometricMovement { Frequency = new Vector2 (1), Amplitude = new Vector2 (800) }, 10.0f
-                );
+                .AddParalell (new IAnimPiece[] {
+                    new TrigonometricMovement { Frequency = new Vector2 (10), Amplitude = new Vector2 (20), Relative = true },
+                    new SimpleMovement { StartPos = Vector2.Zero, EndPos = new Vector2 (1400, 600), Relative = true }
+                }, 5);
         }
     }
 }
