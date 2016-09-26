@@ -1,10 +1,12 @@
 ﻿using Duality;
+using Duality.Editor;
 using Duality.Drawing;
 using MFEP.Duality.Plugins.Animation.AnimPieces;
 
 namespace MFEP.Duality.Plugins.Animation.Sample
 {
-	public class PathAndColorSample : AnimResource
+    [EditorHintCategory (ResNames.EditorCategory)]
+    public class PathAndColorSample : AnimResource
 	{
 		protected override AnimBuilder InitializePieces ()
 		{

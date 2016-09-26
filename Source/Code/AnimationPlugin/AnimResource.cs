@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using Duality;
+﻿using Duality;
+using Duality.Editor;
 
 namespace MFEP.Duality.Plugins.Animation
 {
-	public abstract class AnimResource : Resource
+    [EditorHintImage (ResNames.AnimResourceImagePath)]
+    public abstract class AnimResource : Resource
 	{
 		protected abstract AnimBuilder InitializePieces ();
 

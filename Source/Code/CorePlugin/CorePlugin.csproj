@@ -57,12 +57,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CorePlugin.cs" />
     <Compile Include="CustomComponentUpdateSample.cs" />
     <Compile Include="PathAndColorSample.cs" />
     <Compile Include="PathFollowMovementSample.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LinearMovementSample.cs" />
+    <Compile Include="Properties\ResNames.cs" />
     <Compile Include="WritePercentComp.cs" />
   </ItemGroup>
   <ItemGroup>

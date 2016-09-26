@@ -1,9 +1,11 @@
 ﻿using Duality;
+using Duality.Editor;
 using MFEP.Duality.Plugins.Animation.AnimPieces;
 
 namespace MFEP.Duality.Plugins.Animation.Sample
 {
-	public class LinearMovementSample : AnimResource
+    [EditorHintCategory (ResNames.EditorCategory)]
+    public class LinearMovementSample : AnimResource
 	{
 		protected override AnimBuilder InitializePieces ()
 		{
