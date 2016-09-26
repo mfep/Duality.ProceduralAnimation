@@ -70,7 +70,7 @@ namespace MFEP.Duality.Plugins.Animation
 
         public void Pause ()
         {
-            accAnimPercent += GetAnimPercent ();
+            accAnimPercent = GetAnimPercent ();
             isPlaying = false;
         }
 

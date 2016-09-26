@@ -11,7 +11,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
         {
             return AnimBuilder.Start ()
                 .AddSingle (
-                    new TrigonometricMovement { Frequency = new Vector2 (1), Amplitude = new Vector2 (800) }, 4.0f
+                    new TrigonometricMovement { Frequency = new Vector2 (1), Amplitude = new Vector2 (800) }, 10.0f
                 );
         }
     }
