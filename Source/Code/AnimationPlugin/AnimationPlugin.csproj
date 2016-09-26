@@ -68,7 +68,7 @@
     <Compile Include="IAnimPiece.cs" />
     <Compile Include="AnimResource.cs" />
     <Compile Include="CorePlugin.cs" />
-    <Compile Include="IAnimUpdateable.cs" />
+    <Compile Include="IAnimUpdatable.cs" />
     <Compile Include="Properties\ResNames.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>

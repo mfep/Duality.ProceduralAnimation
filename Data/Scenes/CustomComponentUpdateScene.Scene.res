@@ -107,7 +107,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2083362085">
-        <_items dataType="Array" type="Duality.Component[]" id="3433033366">
+        <_items dataType="Array" type="Duality.Component[]" id="3433033366" length="8">
           <item dataType="Struct" type="Duality.Components.Transform" id="3010105659">
             <active dataType="Bool">true</active>
             <angle dataType="Float">0</angle>
@@ -169,7 +169,7 @@
           </item>
         </_items>
         <_size dataType="Int">4</_size>
-        <_version dataType="Int">6</_version>
+        <_version dataType="Int">10</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3592823144" surrogate="true">
         <header />

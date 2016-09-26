@@ -3,7 +3,7 @@ using Duality;
 
 namespace MFEP.Duality.Plugins.Animation.AnimPieces
 {
-	public class CustomComponentUpdate<TComponent> : IAnimPiece where TComponent : Component, ICmpAnimUpdateable
+	public class CustomComponentUpdate<TComponent> : IAnimPiece where TComponent : Component, ICmpAnimUpdatable
 	{
 		public void Initialize ()
 		{			
@@ -11,7 +11,7 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 
 		public void Tick (float percent, GameObject gameObject)
 		{
-			var component = gameObject.GetComponent<TComponent> () as ICmpAnimUpdateable;
+			var component = gameObject.GetComponent<TComponent> () as ICmpAnimUpdatable;
 			component?.AnimTickCallback (percent);
 		}
 	}

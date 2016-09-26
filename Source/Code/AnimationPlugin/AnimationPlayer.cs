@@ -78,6 +78,7 @@ namespace MFEP.Duality.Plugins.Animation
         {
             accAnimPercent = 0.0f;
             isPlaying = false;
+            Animation.Res.Tick (0, GameObj);
         }
 
 		public void OnUpdate ()
