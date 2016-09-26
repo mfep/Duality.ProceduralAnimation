@@ -2,11 +2,15 @@
 using Duality.Editor;
 using Key = Duality.Input.Key;
 
-namespace MFEP.Duality.Plugins.Animation.Sample
+namespace MFEP.Duality.Plugins.Animation.Extras
 {
     [EditorHintCategory (ResNames.EditorCategory)]
     public class AnimControllerComp : Component, ICmpUpdatable
     {
+        public Key StartKey { get; set; }
+        public Key StopKey { get; set; }
+        public Key PauseKey { get; set; }
+
         private AnimationPlayer AnimPlayer
         {
             get
@@ -17,13 +21,13 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 
         public void OnUpdate ()
         {
-            if (DualityApp.Keyboard.KeyHit (Key.P)) {
+            if (DualityApp.Keyboard.KeyHit (StartKey)) {
                 AnimPlayer?.Play ();
             }
-            if (DualityApp.Keyboard.KeyHit (Key.S)) {
+            if (DualityApp.Keyboard.KeyHit (StopKey)) {
                 AnimPlayer?.Stop ();
             }
-            if (DualityApp.Keyboard.KeyHit (Key.A)) {
+            if (DualityApp.Keyboard.KeyHit (PauseKey)) {
                 AnimPlayer?.Pause ();
             }
         }

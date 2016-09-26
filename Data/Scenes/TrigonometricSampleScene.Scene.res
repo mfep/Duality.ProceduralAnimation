@@ -163,13 +163,16 @@
             <gameobj dataType="ObjectRef">649790727</gameobj>
             <isPlaying dataType="Bool">false</isPlaying>
           </item>
-          <item dataType="Struct" type="MFEP.Duality.Plugins.Animation.Sample.AnimControllerComp" id="3955378797">
+          <item dataType="Struct" type="MFEP.Duality.Plugins.Animation.Extras.AnimControllerComp" id="2423657632">
+            <_x003C_PauseKey_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="A" value="83" />
+            <_x003C_StartKey_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="P" value="98" />
+            <_x003C_StopKey_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="S" value="101" />
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">649790727</gameobj>
           </item>
         </_items>
         <_size dataType="Int">4</_size>
-        <_version dataType="Int">8</_version>
+        <_version dataType="Int">10</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3592823144" surrogate="true">
         <header />
@@ -178,13 +181,13 @@
             <item dataType="ObjectRef">3059840228</item>
             <item dataType="Type" id="567916590" value="Duality.Components.Renderers.SpriteRenderer" />
             <item dataType="Type" id="2581177546" value="MFEP.Duality.Plugins.Animation.AnimationPlayer" />
-            <item dataType="Type" id="2111865246" value="MFEP.Duality.Plugins.Animation.Sample.AnimControllerComp" />
+            <item dataType="Type" id="2111865246" value="MFEP.Duality.Plugins.Animation.Extras.AnimControllerComp" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="310236768">
             <item dataType="ObjectRef">3010105659</item>
             <item dataType="ObjectRef">2291957295</item>
             <item dataType="ObjectRef">3028481768</item>
-            <item dataType="ObjectRef">3955378797</item>
+            <item dataType="ObjectRef">2423657632</item>
           </values>
         </body>
       </compMap>

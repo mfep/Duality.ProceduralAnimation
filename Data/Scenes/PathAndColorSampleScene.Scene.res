@@ -107,7 +107,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2083362085">
-        <_items dataType="Array" type="Duality.Component[]" id="3433033366">
+        <_items dataType="Array" type="Duality.Component[]" id="3433033366" length="4">
           <item dataType="Struct" type="Duality.Components.Transform" id="3010105659">
             <active dataType="Bool">true</active>
             <angle dataType="Float">0</angle>
@@ -163,13 +163,9 @@
             <gameobj dataType="ObjectRef">649790727</gameobj>
             <isPlaying dataType="Bool">false</isPlaying>
           </item>
-          <item dataType="Struct" type="MFEP.Duality.Plugins.Animation.Sample.AnimControllerComp" id="3955378797">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">649790727</gameobj>
-          </item>
         </_items>
-        <_size dataType="Int">4</_size>
-        <_version dataType="Int">8</_version>
+        <_size dataType="Int">3</_size>
+        <_version dataType="Int">9</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3592823144" surrogate="true">
         <header />
@@ -178,13 +174,11 @@
             <item dataType="ObjectRef">3059840228</item>
             <item dataType="Type" id="567916590" value="Duality.Components.Renderers.SpriteRenderer" />
             <item dataType="Type" id="2581177546" value="MFEP.Duality.Plugins.Animation.AnimationPlayer" />
-            <item dataType="Type" id="2111865246" value="MFEP.Duality.Plugins.Animation.Sample.AnimControllerComp" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="310236768">
             <item dataType="ObjectRef">3010105659</item>
             <item dataType="ObjectRef">2291957295</item>
             <item dataType="ObjectRef">3028481768</item>
-            <item dataType="ObjectRef">3955378797</item>
           </values>
         </body>
       </compMap>
