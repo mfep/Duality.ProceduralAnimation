@@ -66,6 +66,7 @@
     <Compile Include="AnimPieces\TrigonometricMovement.cs" />
     <Compile Include="AnimPieces\Wait.cs" />
     <Compile Include="Extras\AnimControllerComp.cs" />
+    <Compile Include="Extras\PathVisualizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IAnimPiece.cs" />
     <Compile Include="AnimResource.cs" />

@@ -8,6 +8,7 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 		public bool ConstantVelocity { get; set; }
         public bool Relative { get; set; }
         public bool Closed { get; set; }
+        public bool Smoothing { get; set; }
 
         private RawList<Vector2> pathVertices;
 		private Segment[] segments;
@@ -15,6 +16,7 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 
 		public void Tick (float percent, GameObject gameObject)
 		{
+		    if (Smoothing) percent = Utilities.Smoothstep(percent);
 		    foreach (var currSegment in segments)
 		    {
 		        if (!(percent < currSegment.EndPercent)) continue;
