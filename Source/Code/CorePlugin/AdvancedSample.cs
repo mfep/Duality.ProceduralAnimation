@@ -12,9 +12,10 @@ namespace MFEP.Duality.Plugins.Animation.Sample
             return AnimBuilder.Start()
                 .AddParalell( new IAnimPiece[]
                     {
-                        new PathFollowMovement {Closed = true, Relative = true, Smoothing = true, ConstantVelocity = true,
-                            PathVertices = new []{new Vector2(-2500, 0), new Vector2(2500, 0), new Vector2(0, 1500)}},
-                        new TrigonometricMovement {Amplitude = new Vector2(0, 200), Frequency = new Vector2(0, 20), Relative = true}
+                        new PathFollowMovement { Closed = true, Relative = true, Smoothing = true, ConstantVelocity = true,
+                            PathVertices = new []{ new Vector2(-2500, 0), new Vector2(2500, 0), new Vector2(0, 1500) } },
+                        new TrigonometricMovement { Amplitude = new Vector2(0, 200), Frequency = new Vector2(0, 20), Relative = true },
+						new Rotate { Frequency = 10.0f }
                     },
                     10.0f
                 );
