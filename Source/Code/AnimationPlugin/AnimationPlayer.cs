@@ -41,6 +41,7 @@ namespace MFEP.Duality.Plugins.Animation
         private TimeSpan animStartTime;
         private bool isPlaying;
         private float accAnimPercent;
+		private bool paused;
 
 		public AnimationPlayer ()
 		{
@@ -51,6 +52,7 @@ namespace MFEP.Duality.Plugins.Animation
 		{
 			if (AutoPlay && context == InitContext.Activate && DualityApp.ExecContext == DualityApp.ExecutionContext.Game) {
                 Play ();
+				accAnimPercent = 0.0f;
 			}
 		}
 
@@ -60,18 +62,24 @@ namespace MFEP.Duality.Plugins.Animation
 
         public void Play ()
         {
+	        if (!paused)
+	        {
+		        InitializeResource ();
+	        }
             if (Animation == null || Animation.Res == null) {
                 isPlaying = false;
                 return;
             }
             animStartTime = Time.GameTimer;
             isPlaying = true;
+	        paused = false;
         }
 
         public void Pause ()
         {
             accAnimPercent = GetAnimPercent ();
             isPlaying = false;
+	        paused = true;
         }
 
         public void Stop ()
@@ -112,6 +120,11 @@ namespace MFEP.Duality.Plugins.Animation
 			}
 
 			Animation.Res?.Tick (animPercent, GameObj);
+		}
+
+		private void InitializeResource ()
+		{
+			Animation.Res.Initialize ();
 		}
 	}
 }

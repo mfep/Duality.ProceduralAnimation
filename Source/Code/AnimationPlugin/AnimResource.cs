@@ -17,9 +17,9 @@ namespace MFEP.Duality.Plugins.Animation
 		}
 
 		[DontSerialize]
-		private readonly AnimBuilder builder;
+		private AnimBuilder builder;
 
-		public AnimResource ()
+		public void Initialize ()
 		{
 			builder = InitializePieces ();
 			if (builder == null) {

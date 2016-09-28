@@ -162,6 +162,7 @@
             <animStartTime dataType="Struct" type="System.TimeSpan" />
             <gameobj dataType="ObjectRef">649790727</gameobj>
             <isPlaying dataType="Bool">false</isPlaying>
+            <paused dataType="Bool">false</paused>
           </item>
           <item dataType="Struct" type="MFEP.Duality.Plugins.Animation.Extras.AnimControllerComp" id="2423657632">
             <_x003C_PauseKey_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="A" value="83" />
@@ -185,12 +186,12 @@
               <vertexArraysFree dataType="Struct" type="System.Collections.Generic.List`1[[Duality.RawList`1[[Duality.Drawing.VertexC1P3T2]]]]" id="1253294030">
                 <_items dataType="Array" type="Duality.RawList`1[[Duality.Drawing.VertexC1P3T2]][]" id="764142032" length="0" />
                 <_size dataType="Int">0</_size>
-                <_version dataType="Int">36</_version>
+                <_version dataType="Int">51</_version>
               </vertexArraysFree>
               <vertexArraysUsed dataType="Struct" type="System.Collections.Generic.List`1[[Duality.RawList`1[[Duality.Drawing.VertexC1P3T2]]]]" id="1641518410">
                 <_items dataType="ObjectRef">764142032</_items>
                 <_size dataType="Int">0</_size>
-                <_version dataType="Int">36</_version>
+                <_version dataType="Int">51</_version>
               </vertexArraysUsed>
             </buffer>
             <gameobj dataType="ObjectRef">649790727</gameobj>

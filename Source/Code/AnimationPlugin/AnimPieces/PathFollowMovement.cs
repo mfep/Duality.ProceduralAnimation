@@ -4,30 +4,38 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 {
 	public class PathFollowMovement : IAnimPiece
 	{
+		public enum SmoothMode
+		{
+			NoSmooth,
+			GlobalSmooth,
+			SmoothSections
+		}
+
 		public Vector2[] PathVertices { get; set; }
 		public bool ConstantVelocity { get; set; }
-        public bool Relative { get; set; }
-        public bool Closed { get; set; }
-        public bool Smoothing { get; set; }
+		public bool Relative { get; set; }
+		public bool Closed { get; set; }
+		public SmoothMode Smoothing { get; set; }
 
-        private RawList<Vector2> pathVertices;
+		private RawList<Vector2> pathVertices;
 		private Segment[] segments;
-        private Vector2 lastPos;
+		private Vector2 lastPos;
 
 		public void Tick (float percent, GameObject gameObject)
 		{
-		    if (Smoothing) percent = Utilities.Smoothstep(percent);
+			if (Smoothing == SmoothMode.GlobalSmooth) percent = Utilities.Smoothstep(percent);
 		    foreach (var currSegment in segments)
 		    {
 		        if (!(percent < currSegment.EndPercent)) continue;
 		        var currPercent = (percent - currSegment.StartPercent) / (currSegment.EndPercent - currSegment.StartPercent);
+			    if (Smoothing == SmoothMode.SmoothSections) currPercent = Utilities.Smoothstep(currPercent);
 		        var pos = Vector2.Lerp (currSegment.StartPos, currSegment.EndPos, currPercent);
 		        if (Relative) {
 		            gameObject.Transform?.MoveBy (pos - lastPos);
 		            lastPos = pos;
 		        } else {
 		            gameObject.Transform?.MoveTo (pos);
-		        }					
+		        }
 		        break;
 		    }
 		}
