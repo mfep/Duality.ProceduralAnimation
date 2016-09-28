@@ -25,7 +25,7 @@ namespace MFEP.Duality.Plugins.Animation
 		{
 			CheckTime (time);
 			piece.Initialize ();
-			pieceList.Add (new AnimPieceWrapper { Pieces = new IAnimPiece[] { piece }, Time = time });
+			pieceList.Add (new AnimPieceWrapper { Pieces = new [] { piece }, Time = time });
 			OverallTime += time;
 			return this;
 		}
@@ -74,8 +74,7 @@ namespace MFEP.Duality.Plugins.Animation
 
 		private void CheckTime (float time)
 		{
-			if (time <= 0.0f)
-				throw new ArgumentOutOfRangeException ();
+		    if (time <= 0) throw new ArgumentOutOfRangeException(nameof(time));
 		}		
 
 		private class AnimPieceWrapper

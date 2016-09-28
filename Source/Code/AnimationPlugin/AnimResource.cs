@@ -17,14 +17,13 @@ namespace MFEP.Duality.Plugins.Animation
 		}
 
 		[DontSerialize]
-		private AnimBuilder builder = null;
+		private readonly AnimBuilder builder;
 
 		public AnimResource ()
 		{
 			builder = InitializePieces ();
 			if (builder == null) {
 				Log.Core.WriteError ("InitializePieces should not return null!");
-				return;
 			}
 		}
 

@@ -11,13 +11,7 @@ namespace MFEP.Duality.Plugins.Animation.Extras
         public Key StopKey { get; set; }
         public Key PauseKey { get; set; }
 
-        private AnimationPlayer AnimPlayer
-        {
-            get
-            {
-                return GameObj.GetComponent<AnimationPlayer> ();
-            }
-        }
+        private AnimationPlayer AnimPlayer => GameObj.GetComponent<AnimationPlayer> ();
 
         public void OnUpdate ()
         {

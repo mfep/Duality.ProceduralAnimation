@@ -1,10 +1,8 @@
-﻿using Duality;
-
-namespace MFEP.Duality.Plugins.Animation
+﻿namespace MFEP.Duality.Plugins.Animation
 {
-	static internal class Utilities
+	internal static class Utilities
 	{
-		static public float Smoothstep (float x)		
+		public static float Smoothstep (float x)		
 			=> x * x * (3.0f - 2.0f * x);
 	}
 }

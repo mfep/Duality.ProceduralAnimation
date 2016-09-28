@@ -39,8 +39,8 @@ namespace MFEP.Duality.Plugins.Animation
 		}
 
         private TimeSpan animStartTime;
-        private bool isPlaying = false;
-        private float accAnimPercent = 0.0f;
+        private bool isPlaying;
+        private float accAnimPercent;
 
 		public AnimationPlayer ()
 		{

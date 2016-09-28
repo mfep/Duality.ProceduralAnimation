@@ -1,6 +1,6 @@
 ﻿using Duality;
-using Duality.Drawing;
 using Duality.Components.Renderers;
+using Duality.Drawing;
 
 namespace MFEP.Duality.Plugins.Animation.AnimPieces
 {
@@ -22,7 +22,7 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 			if (renderer == null) {
 				var animRenderer = gameObject.GetComponent<AnimSpriteRenderer> ();
 				if (animRenderer == null) {
-					Log.Core.WriteError ($"Neither a SpriteRenderer nor an AnimSpriteRenderer is attached to {gameObject.ToString ()}");
+					Log.Core.WriteError ($"Neither a SpriteRenderer nor an AnimSpriteRenderer is attached to {gameObject}");
 					return;
 				}
 				animRenderer.ColorTint = newColor;

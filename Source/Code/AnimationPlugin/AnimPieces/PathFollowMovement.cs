@@ -15,20 +15,19 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 
 		public void Tick (float percent, GameObject gameObject)
 		{
-			for (int index = 0; index < segments.Length; index++) {
-				var currSegment = segments[index];
-				if (percent < currSegment.EndPercent) {
-					var currPercent = (percent - currSegment.StartPercent) / (currSegment.EndPercent - currSegment.StartPercent);
-					var pos = Vector2.Lerp (currSegment.StartPos, currSegment.EndPos, currPercent);
-                    if (Relative) {
-                        gameObject.Transform?.MoveBy (pos - lastPos);
-                        lastPos = pos;
-                    } else {
-                        gameObject.Transform?.MoveTo (pos);
-                    }					
-					break;
-				}
-			}
+		    foreach (var currSegment in segments)
+		    {
+		        if (!(percent < currSegment.EndPercent)) continue;
+		        var currPercent = (percent - currSegment.StartPercent) / (currSegment.EndPercent - currSegment.StartPercent);
+		        var pos = Vector2.Lerp (currSegment.StartPos, currSegment.EndPos, currPercent);
+		        if (Relative) {
+		            gameObject.Transform?.MoveBy (pos - lastPos);
+		            lastPos = pos;
+		        } else {
+		            gameObject.Transform?.MoveTo (pos);
+		        }					
+		        break;
+		    }
 		}
 
 		public void Initialize ()
