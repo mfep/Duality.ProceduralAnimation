@@ -11,12 +11,12 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 		public bool Smoothing { get; set; }
 
 		public void Initialize ()
-		{			
+		{
 		}
 
 		public void Tick (float percent, GameObject gameObject)
 		{
-			ColorRgba newColor = ColorRgba.Lerp (StartColor, EndColor, Smoothing ? Utilities.Smoothstep (percent) : percent);
+			var newColor = ColorRgba.Lerp (StartColor, EndColor, Smoothing ? Utilities.Smoothstep (percent) : percent);
 
 			var renderer = gameObject.GetComponent<SpriteRenderer> ();
 			if (renderer == null) {

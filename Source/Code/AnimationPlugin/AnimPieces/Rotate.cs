@@ -6,12 +6,12 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 	{
 		public float Frequency { get; set; }
 
-		public void Tick(float percent, GameObject gameObject)
+		public void Tick (float percent, GameObject gameObject)
 		{
-			gameObject.Transform?.TurnTo(percent * Frequency * MathF.TwoPi);
+			gameObject.Transform?.TurnTo (percent * Frequency * MathF.TwoPi);
 		}
 
-		public void Initialize()
+		public void Initialize ()
 		{
 		}
 	}

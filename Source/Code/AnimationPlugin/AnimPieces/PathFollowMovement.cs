@@ -11,33 +11,33 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 			SmoothSections
 		}
 
+		private Vector2 lastPos;
+
+		private RawList<Vector2> pathVertices;
+		private Segment[] segments;
+
 		public Vector2[] PathVertices { get; set; }
 		public bool ConstantVelocity { get; set; }
 		public bool Relative { get; set; }
 		public bool Closed { get; set; }
 		public SmoothMode Smoothing { get; set; }
 
-		private RawList<Vector2> pathVertices;
-		private Segment[] segments;
-		private Vector2 lastPos;
-
 		public void Tick (float percent, GameObject gameObject)
 		{
-			if (Smoothing == SmoothMode.GlobalSmooth) percent = Utilities.Smoothstep(percent);
-		    foreach (var currSegment in segments)
-		    {
-		        if (!(percent < currSegment.EndPercent)) continue;
-		        var currPercent = (percent - currSegment.StartPercent) / (currSegment.EndPercent - currSegment.StartPercent);
-			    if (Smoothing == SmoothMode.SmoothSections) currPercent = Utilities.Smoothstep(currPercent);
-		        var pos = Vector2.Lerp (currSegment.StartPos, currSegment.EndPos, currPercent);
-		        if (Relative) {
-		            gameObject.Transform?.MoveBy (pos - lastPos);
-		            lastPos = pos;
-		        } else {
-		            gameObject.Transform?.MoveTo (pos);
-		        }
-		        break;
-		    }
+			if (Smoothing == SmoothMode.GlobalSmooth) percent = Utilities.Smoothstep (percent);
+			foreach (var currSegment in segments) {
+				if (!(percent < currSegment.EndPercent)) continue;
+				var currPercent = (percent - currSegment.StartPercent) / (currSegment.EndPercent - currSegment.StartPercent);
+				if (Smoothing == SmoothMode.SmoothSections) currPercent = Utilities.Smoothstep (currPercent);
+				var pos = Vector2.Lerp (currSegment.StartPos, currSegment.EndPos, currPercent);
+				if (Relative) {
+					gameObject.Transform?.MoveBy (pos - lastPos);
+					lastPos = pos;
+				} else {
+					gameObject.Transform?.MoveTo (pos);
+				}
+				break;
+			}
 		}
 
 		public void Initialize ()
@@ -46,25 +46,23 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 				Log.Core.WriteError ("PathVertices should not be null!");
 				return;
 			}
-            pathVertices = new RawList<Vector2> (PathVertices);
-            if (Closed) {
-                Close ();
-            }            
+			pathVertices = new RawList<Vector2> (PathVertices);
+			if (Closed) Close ();
 			CalculateSegments ();
 		}
 
 		private void CalculateSegments ()
 		{
 			segments = new Segment[pathVertices.Count - 1];
-			float totalLength = CalculateTotalLength (pathVertices);
-			float accSegmentLength = 0.0f;
+			var totalLength = CalculateTotalLength (pathVertices);
+			var accSegmentLength = 0.0f;
 
-			for (int index = 0; index < segments.Length; index++) {
+			for (var index = 0; index < segments.Length; index++) {
 				var beginPos = pathVertices[index];
 				var endPos = pathVertices[index + 1];
 
-				float currentSegmentLength = ConstantVelocity ?
-					(beginPos - endPos).Length / totalLength
+				var currentSegmentLength = ConstantVelocity
+					? (beginPos - endPos).Length / totalLength
 					: 1.0f / segments.Length;
 
 				segments[index] = new Segment
@@ -79,19 +77,15 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 			}
 		}
 
-        private void Close ()
-        {
-            if (pathVertices[0] != pathVertices[pathVertices.Count - 1]) {
-                pathVertices.Add (pathVertices[0]);
-            }
-        }
+		private void Close ()
+		{
+			if (pathVertices[0] != pathVertices[pathVertices.Count - 1]) pathVertices.Add (pathVertices[0]);
+		}
 
 		private static float CalculateTotalLength (RawList<Vector2> vertices)
 		{
-			float length = 0.0f;
-			for (int index = 0; index < vertices.Count - 1; ++index) {
-				length += (vertices[index] - vertices[index + 1]).Length;
-			}
+			var length = 0.0f;
+			for (var index = 0; index < vertices.Count - 1; ++index) length += (vertices[index] - vertices[index + 1]).Length;
 			return length;
 		}
 

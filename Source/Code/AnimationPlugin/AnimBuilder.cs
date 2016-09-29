@@ -1,20 +1,20 @@
 ﻿using System;
-using Duality;
 using System.Collections.Generic;
 using System.Linq;
+using Duality;
 
 namespace MFEP.Duality.Plugins.Animation
 {
 	public sealed class AnimBuilder
 	{
-		internal float OverallTime { get; private set; }
-
-		private List<AnimPieceWrapper> pieceList;
+		private readonly List<AnimPieceWrapper> pieceList;
 
 		private AnimBuilder ()
 		{
 			pieceList = new List<AnimPieceWrapper> ();
 		}
+
+		internal float OverallTime { get; private set; }
 
 		public static AnimBuilder Start ()
 		{
@@ -25,7 +25,7 @@ namespace MFEP.Duality.Plugins.Animation
 		{
 			CheckTime (time);
 			piece.Initialize ();
-			pieceList.Add (new AnimPieceWrapper { Pieces = new [] { piece }, Time = time });
+			pieceList.Add (new AnimPieceWrapper {Pieces = new[] {piece}, Time = time});
 			OverallTime += time;
 			return this;
 		}
@@ -34,7 +34,7 @@ namespace MFEP.Duality.Plugins.Animation
 		{
 			CheckTime (time);
 			foreach (var piece in pieces) piece.Initialize ();
-			pieceList.Add (new AnimPieceWrapper { Pieces = pieces, Time = time });
+			pieceList.Add (new AnimPieceWrapper {Pieces = pieces, Time = time});
 			OverallTime += time;
 			return this;
 		}
@@ -47,21 +47,19 @@ namespace MFEP.Duality.Plugins.Animation
 				Log.Core.WriteError ("No pieces at this tick!");
 				return;
 			}
-			foreach (var piece in piecesAtTick) {
-				piece.Tick (pieceOwnPercent, gameObject);
-			}
-		}		
+			foreach (var piece in piecesAtTick) piece.Tick (pieceOwnPercent, gameObject);
+		}
 
 		private IAnimPiece[] GetPieceAtPercent (float percent, out float pieceOwnPercent)
 		{
-			float accTime = 0.0f;
+			var accTime = 0.0f;
 			var relativeTimes = pieceList.Select (wrapper =>
 			{
 				var perc = accTime / OverallTime;
 				accTime += wrapper.Time;
-				return new { StartPercent = perc, Wrapper = wrapper };
+				return new {StartPercent = perc, Wrapper = wrapper};
 			});
-			
+
 			foreach (var iter in relativeTimes) {
 				pieceOwnPercent = (percent - iter.StartPercent) * OverallTime / iter.Wrapper.Time;
 				if (pieceOwnPercent > 1.0f)
@@ -74,8 +72,8 @@ namespace MFEP.Duality.Plugins.Animation
 
 		private void CheckTime (float time)
 		{
-		    if (time <= 0) throw new ArgumentOutOfRangeException(nameof(time));
-		}		
+			if (time <= 0) throw new ArgumentOutOfRangeException (nameof (time));
+		}
 
 		private class AnimPieceWrapper
 		{
