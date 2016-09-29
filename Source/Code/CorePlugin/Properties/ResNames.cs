@@ -1,4 +1,4 @@
-﻿namespace MFEP.Duality.Plugins.Animation.Sample
+﻿namespace MFEP.Duality.Plugins.Animation.Sample.Properties
 {
 	internal static class ResNames
 	{

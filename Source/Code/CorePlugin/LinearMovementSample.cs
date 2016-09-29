@@ -1,6 +1,7 @@
 ﻿using Duality;
 using Duality.Editor;
 using MFEP.Duality.Plugins.Animation.AnimPieces;
+using MFEP.Duality.Plugins.Animation.Sample.Properties;
 
 namespace MFEP.Duality.Plugins.Animation.Sample
 {
