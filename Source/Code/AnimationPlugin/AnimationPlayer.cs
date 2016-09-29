@@ -8,6 +8,11 @@ namespace MFEP.Duality.Plugins.Animation
     [EditorHintImage (ResNames.AnimComponentImagePath)]
 	public class AnimationPlayer : Component, ICmpInitializable, ICmpUpdatable
 	{
+		private enum State
+		{
+			Playing, Stopped, Paused
+		}
+
 		public ContentRef<AnimResource> Animation { get; set; }
 		public bool AutoPlay { get; set; }
 		public bool Looping { get; set; }
@@ -26,7 +31,7 @@ namespace MFEP.Duality.Plugins.Animation
 		{
 			get
 			{
-				return isPlaying;
+				return state == State.Playing;
 			}
 			private set
 			{
@@ -39,9 +44,8 @@ namespace MFEP.Duality.Plugins.Animation
 		}
 
         private TimeSpan animStartTime;
-        private bool isPlaying;
-        private float accAnimPercent;
-		private bool paused;
+        private State state = State.Stopped;
+        private float accAnimPercent;		
 
 		public AnimationPlayer ()
 		{
@@ -62,30 +66,27 @@ namespace MFEP.Duality.Plugins.Animation
 
         public void Play ()
         {
-	        if (!paused)
+	        if (state == State.Stopped)
 	        {
 		        InitializeResource ();
 	        }
-            if (Animation == null || Animation.Res == null) {
-                isPlaying = false;
+            if (Animation == null || Animation.Res == null) {                
                 return;
             }
             animStartTime = Time.GameTimer;
-            isPlaying = true;
-	        paused = false;
+            state = State.Playing;	    
         }
 
         public void Pause ()
         {
             accAnimPercent = GetAnimPercent ();
-            isPlaying = false;
-	        paused = true;
+            state = State.Paused;
         }
 
         public void Stop ()
         {
             accAnimPercent = 0.0f;
-            isPlaying = false;
+            state = State.Stopped;
             Animation.Res.Tick (0, GameObj);
         }
 
