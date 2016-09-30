@@ -2,6 +2,7 @@
 using Duality.Editor;
 using MFEP.Duality.Plugins.Animation.AnimPieces;
 using MFEP.Duality.Plugins.Animation.Sample.Properties;
+using static MFEP.Duality.Plugins.Animation.Utils;
 
 namespace MFEP.Duality.Plugins.Animation.Sample
 {
@@ -13,8 +14,13 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 			return AnimBuilder.Start ()
 				.AddParalell (new IAnimPiece[]
 				{
-					new TrigonometricMovement { Frequency = new Vector2 (10), Amplitude = new Vector2 (20), Relative = true },
-					new SimpleMovement { StartPos = Vector2.Zero, EndPos = new Vector2 (1400, 600), Relative = true }
+					new TrigonometricMovement
+					{
+						Amplitude = new Vector2 (1000),
+						FreqGen = Linear (5),
+						AmpGen = AbsSin,
+						PhaseGen = SimpleCos
+					}
 				}, 5.0f);
 		}
 	}

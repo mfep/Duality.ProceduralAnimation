@@ -4,7 +4,7 @@ namespace MFEP.Duality.Plugins.Animation
 {
 	public interface IAnimPiece
 	{
-		void Tick (float percent, GameObject gameObject);
+		void Tick (float pc, GameObject gameObject);
 		void Initialize ();
 	}
 }

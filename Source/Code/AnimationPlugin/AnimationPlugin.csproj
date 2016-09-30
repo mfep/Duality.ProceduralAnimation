@@ -74,7 +74,7 @@
     <Compile Include="CorePlugin.cs" />
     <Compile Include="IAnimUpdatable.cs" />
     <Compile Include="Properties\ResNames.cs" />
-    <Compile Include="Utilities.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="EmbeddedResources\math_functions.png" />

@@ -107,7 +107,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2083362085">
-        <_items dataType="Array" type="Duality.Component[]" id="3433033366">
+        <_items dataType="Array" type="Duality.Component[]" id="3433033366" length="8">
           <item dataType="Struct" type="Duality.Components.Transform" id="3010105659">
             <active dataType="Bool">true</active>
             <angle dataType="Float">0</angle>
@@ -156,12 +156,12 @@
             </_x003C_Animation_x003E_k__BackingField>
             <_x003C_AutoPlay_x003E_k__BackingField dataType="Bool">true</_x003C_AutoPlay_x003E_k__BackingField>
             <_x003C_Looping_x003E_k__BackingField dataType="Bool">true</_x003C_Looping_x003E_k__BackingField>
-            <_x003C_PlaybackRate_x003E_k__BackingField dataType="Float">1</_x003C_PlaybackRate_x003E_k__BackingField>
+            <_x003C_PlaybackRate_x003E_k__BackingField dataType="Float">0.75</_x003C_PlaybackRate_x003E_k__BackingField>
             <accAnimPercent dataType="Float">0</accAnimPercent>
             <active dataType="Bool">true</active>
             <animStartTime dataType="Struct" type="System.TimeSpan" />
             <gameobj dataType="ObjectRef">649790727</gameobj>
-            <isPlaying dataType="Bool">false</isPlaying>
+            <state dataType="Enum" type="MFEP.Duality.Plugins.Animation.AnimationPlayer+State" name="Stopped" value="1" />
           </item>
           <item dataType="Struct" type="MFEP.Duality.Plugins.Animation.Extras.AnimControllerComp" id="2423657632">
             <_x003C_PauseKey_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="A" value="83" />
@@ -170,9 +170,39 @@
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">649790727</gameobj>
           </item>
+          <item dataType="Struct" type="MFEP.Duality.Plugins.Animation.Extras.PathVisualizer" id="3374086855">
+            <_x003C_BoundRadius_x003E_k__BackingField dataType="Float">500</_x003C_BoundRadius_x003E_k__BackingField>
+            <_x003C_Color_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+              <A dataType="Byte">255</A>
+              <B dataType="Byte">255</B>
+              <G dataType="Byte">255</G>
+              <R dataType="Byte">255</R>
+            </_x003C_Color_x003E_k__BackingField>
+            <_x003C_FollowedFrames_x003E_k__BackingField dataType="Int">200</_x003C_FollowedFrames_x003E_k__BackingField>
+            <active dataType="Bool">true</active>
+            <buffer dataType="Struct" type="Duality.Drawing.CanvasBuffer" id="3575919527">
+              <dummy dataType="Bool">false</dummy>
+              <vertexArraysFree dataType="Struct" type="System.Collections.Generic.List`1[[Duality.RawList`1[[Duality.Drawing.VertexC1P3T2]]]]" id="1253294030">
+                <_items dataType="Array" type="Duality.RawList`1[[Duality.Drawing.VertexC1P3T2]][]" id="764142032" length="0" />
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">42</_version>
+              </vertexArraysFree>
+              <vertexArraysUsed dataType="Struct" type="System.Collections.Generic.List`1[[Duality.RawList`1[[Duality.Drawing.VertexC1P3T2]]]]" id="1641518410">
+                <_items dataType="ObjectRef">764142032</_items>
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">42</_version>
+              </vertexArraysUsed>
+            </buffer>
+            <gameobj dataType="ObjectRef">649790727</gameobj>
+            <pointsFollowed dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Vector2]]" id="2264183808">
+              <_items dataType="Array" type="Duality.Vector2[]" id="2664534925" length="0" />
+              <_size dataType="Int">0</_size>
+              <_version dataType="Int">0</_version>
+            </pointsFollowed>
+          </item>
         </_items>
-        <_size dataType="Int">4</_size>
-        <_version dataType="Int">10</_version>
+        <_size dataType="Int">5</_size>
+        <_version dataType="Int">11</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3592823144" surrogate="true">
         <header />
@@ -182,12 +212,14 @@
             <item dataType="Type" id="567916590" value="Duality.Components.Renderers.SpriteRenderer" />
             <item dataType="Type" id="2581177546" value="MFEP.Duality.Plugins.Animation.AnimationPlayer" />
             <item dataType="Type" id="2111865246" value="MFEP.Duality.Plugins.Animation.Extras.AnimControllerComp" />
+            <item dataType="Type" id="2997978330" value="MFEP.Duality.Plugins.Animation.Extras.PathVisualizer" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="310236768">
             <item dataType="ObjectRef">3010105659</item>
             <item dataType="ObjectRef">2291957295</item>
             <item dataType="ObjectRef">3028481768</item>
             <item dataType="ObjectRef">2423657632</item>
+            <item dataType="ObjectRef">3374086855</item>
           </values>
         </body>
       </compMap>

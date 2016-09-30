@@ -23,8 +23,8 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 				}, 1.0f)
 				.AddParalell (new IAnimPiece[]
 				{
-					new SimpleColor { StartColor = ColorRgba.Blue, EndColor = ColorRgba.White, Smoothing = true },
-					new SimpleMovement { StartPos = new Vector2 (0, 0), EndPos = new Vector2 (1000, 0), Smoothing = true }
+					new SimpleColor { StartColor = ColorRgba.Blue, EndColor = ColorRgba.White },
+					new SimpleMovement { StartPos = new Vector2 (0, 0), EndPos = new Vector2 (1000, 0) }
 				}, 2.0f);
 		}
 	}

@@ -1,6 +1,7 @@
 ﻿using Duality;
 using Duality.Components.Renderers;
 using Duality.Drawing;
+using static MFEP.Duality.Plugins.Animation.Utils;
 
 namespace MFEP.Duality.Plugins.Animation.AnimPieces
 {
@@ -8,15 +9,15 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 	{
 		public ColorRgba StartColor { get; set; }
 		public ColorRgba EndColor { get; set; }
-		public bool Smoothing { get; set; }
+		public SignalGen ColorGen { get; set; } = Unity;
 
 		public void Initialize ()
 		{
 		}
 
-		public void Tick (float percent, GameObject gameObject)
+		public void Tick (float pc, GameObject gameObject)
 		{
-			var newColor = ColorRgba.Lerp (StartColor, EndColor, Smoothing ? Utilities.Smoothstep (percent) : percent);
+			var newColor = ColorRgba.Lerp (StartColor, EndColor, ColorGen (pc));
 
 			var renderer = gameObject.GetComponent<SpriteRenderer> ();
 			if (renderer == null) {

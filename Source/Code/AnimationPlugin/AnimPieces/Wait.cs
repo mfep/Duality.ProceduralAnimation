@@ -8,7 +8,7 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 		{
 		}
 
-		public void Tick (float percent, GameObject gameObject)
+		public void Tick (float pc, GameObject gameObject)
 		{
 		}
 	}

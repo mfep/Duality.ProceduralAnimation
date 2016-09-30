@@ -1,34 +1,29 @@
 ﻿using Duality;
+using static MFEP.Duality.Plugins.Animation.Utils;
 
 namespace MFEP.Duality.Plugins.Animation.AnimPieces
 {
 	public class PathFollowMovement : IAnimPiece
 	{
-		public enum SmoothMode
-		{
-			NoSmooth,
-			GlobalSmooth,
-			SmoothSections
-		}
-
 		private Vector2 lastPos;
 
 		private RawList<Vector2> pathVertices;
 		private Segment[] segments;
 
 		public Vector2[] PathVertices { get; set; }
-		public bool ConstantVelocity { get; set; }
-		public bool Relative { get; set; }
+		public bool ConstantVelocity { get; set; } = true;
+		public bool Relative { get; set; } = true;
 		public bool Closed { get; set; }
-		public SmoothMode Smoothing { get; set; }
+		public SignalGen OverSpeedGen { get; set; } = Unity;
+		public SignalGen SegmentSpeedGen { get; set; } = Unity;
 
-		public void Tick (float percent, GameObject gameObject)
+		public void Tick (float pc, GameObject gameObject)
 		{
-			if (Smoothing == SmoothMode.GlobalSmooth) percent = Utilities.Smoothstep (percent);
+			pc = OverSpeedGen (pc);
 			foreach (var currSegment in segments) {
-				if (!(percent < currSegment.EndPercent)) continue;
-				var currPercent = (percent - currSegment.StartPercent) / (currSegment.EndPercent - currSegment.StartPercent);
-				if (Smoothing == SmoothMode.SmoothSections) currPercent = Utilities.Smoothstep (currPercent);
+				if (!(pc < currSegment.EndPercent)) continue;
+				var currPercent = (pc - currSegment.StartPercent) / (currSegment.EndPercent - currSegment.StartPercent);
+				currPercent = SegmentSpeedGen (currPercent);
 				var pos = Vector2.Lerp (currSegment.StartPos, currSegment.EndPos, currPercent);
 				if (Relative) {
 					gameObject.Transform?.MoveBy (pos - lastPos);
