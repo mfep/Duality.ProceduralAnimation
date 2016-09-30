@@ -13,9 +13,16 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 			return AnimBuilder.Start ()
 				.AddParalell (new IAnimPiece[]
 				{
-					new SimpleMovement { EndPos = new Vector2 (500, 0) },
-					new CustomComponentUpdate<WritePercentComp> ()
-				}, 5.0f);
+					new SimpleMovement { EndPos = new Vector2 (2500, 0) },
+					new CustomComponentUpdate<WritePercentComp> (),
+					new CallbackProvider
+					{
+						Callback = (pc, go) =>
+						{
+							if (pc > 0.7f) go.Transform.Pos += Vector3.UnitY * 3.0f;
+						}
+					}
+				}, 3.0f);
 		}
 	}
 }

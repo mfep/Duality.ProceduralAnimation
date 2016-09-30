@@ -20,7 +20,7 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 
 		public void Tick (float pc, GameObject gameObject)
 		{
-			var pos = new Vector2 (				
+			var pos = new Vector2 (
 				AmpGen (pc) * Amplitude.X * MathF.Cos (pc * MathF.TwoPi * Frequency.X * FreqGen (pc) + Phase.X * PhaseGen (pc)),
 				AmpGen (pc) * Amplitude.Y * MathF.Sin (pc * MathF.TwoPi * Frequency.Y * FreqGen (pc) + Phase.Y * PhaseGen (pc))
 			);
