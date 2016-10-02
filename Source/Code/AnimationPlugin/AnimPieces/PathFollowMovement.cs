@@ -3,6 +3,10 @@ using static MFEP.Duality.Plugins.Animation.Utils;
 
 namespace MFEP.Duality.Plugins.Animation.AnimPieces
 {
+	/// <summary>
+	///     Moves the animated GameObject along a preinitialized path. The path consists of the segments between the
+	///     PathVertices.
+	/// </summary>
 	public class PathFollowMovement : IAnimPiece
 	{
 		private Vector2 lastPos;
@@ -10,12 +14,42 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 		private RawList<Vector2> pathVertices;
 		private Segment[] segments;
 
+
+		/// <summary>
+		///     MUST BE DECLARED. The local coordinates of the path the animation will follow.
+		///     Default is null
+		/// </summary>
 		public Vector2[] PathVertices { get; set; }
+
+		/// <summary>
+		///     If set to false, running every segment takes the same time, the segments' length does not count. Otherwise, the
+		///     speeed will be constant.
+		///     Default is true
+		/// </summary>
 		public bool ConstantVelocity { get; set; } = true;
+
+		/// <summary>
+		///     Wheter the movement is combineable with other movement. Even if false, the movement takes place in local space.
+		///     Default is true
+		/// </summary>
 		public bool Relative { get; set; } = true;
-		public bool Closed { get; set; }
+
+		/// <summary>
+		///     If set to true, the algorithm automaticallt generates one more segment between the first and last vertex.
+		///     Default is false
+		/// </summary>
+		public bool Closed { get; set; } = false;
+
+		/// <summary>
+		///     TODO
+		/// </summary>
 		public SignalGen OverSpeedGen { get; set; } = Unity;
+
+		/// <summary>
+		///     TODO
+		/// </summary>
 		public SignalGen SegmentSpeedGen { get; set; } = Unity;
+
 
 		public void Tick (float pc, GameObject gameObject)
 		{
@@ -26,10 +60,10 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 				currPercent = SegmentSpeedGen (currPercent);
 				var pos = Vector2.Lerp (currSegment.StartPos, currSegment.EndPos, currPercent);
 				if (Relative) {
-					gameObject.Transform?.MoveBy (pos - lastPos);
+					gameObject.Transform.MoveBy (pos - lastPos);
 					lastPos = pos;
 				} else {
-					gameObject.Transform?.MoveTo (pos);
+					gameObject.Transform.MoveTo (pos);
 				}
 				break;
 			}

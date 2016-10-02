@@ -5,10 +5,27 @@ using static MFEP.Duality.Plugins.Animation.Utils;
 
 namespace MFEP.Duality.Plugins.Animation.AnimPieces
 {
+	/// <summary>
+	///     Simple color interpolating AnimPiece.
+	/// </summary>
 	public class SimpleColor : IAnimPiece
 	{
-		public ColorRgba StartColor { get; set; }
-		public ColorRgba EndColor { get; set; }
+		/// <summary>
+		///     Color at animation start.
+		///     Default is ColorRgba.Black
+		/// </summary>
+		public ColorRgba StartColor { get; set; } = ColorRgba.Black;
+
+		/// <summary>
+		///     Color at animation end.
+		///     Default is ColorRgba.White
+		/// </summary>
+		public ColorRgba EndColor { get; set; } = ColorRgba.White;
+
+		/// <summary>
+		///     Color interpolating function.
+		///     Default is Unity
+		/// </summary>
 		public SignalGen ColorGen { get; set; } = Unity;
 
 		public void Initialize ()

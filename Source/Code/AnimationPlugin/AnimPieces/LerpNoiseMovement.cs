@@ -4,9 +4,13 @@ using static MFEP.Duality.Plugins.Animation.Utils;
 
 namespace MFEP.Duality.Plugins.Animation.AnimPieces
 {
+	/// <summary>
+	///     Implements random movement based on a simple noise algorhitm. The Direction attribute controls the direction of the
+	///     movement.
+	/// </summary>
 	public class LerpNoiseMovement : IAnimPiece
 	{
-		public static Random staticRandom = new Random ((int)DateTime.Now.ToBinary ());
+		private static readonly Random staticRandom = new Random ((int)DateTime.Now.ToBinary ());
 
 		private Vector2 lastPos;
 		private float lastSamplePc;
@@ -14,12 +18,43 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 		private float nextSamplePc;
 		private float nextSamplePos;
 
+
+		/// <summary>
+		///     Controls the direction of the random movement. Its length is indifferent, will be normalized.
+		///     Default is Vector2.UnitX
+		/// </summary>
 		public Vector2 Direction { get; set; } = Vector2.UnitX;
-		public float Frequency { get; set; } = 10.0f;
+
+		/// <summary>
+		///     The frequency of the direction changes.
+		///     Default is 10f
+		/// </summary>
+		public float Frequency { get; set; } = 10f;
+
+		/// <summary>
+		///     real_frequency := Frequency * FreqencyGen (currentAnimPercent)
+		///     Default is Const1
+		/// </summary>
 		public SignalGen FrequencyGen { get; set; } = Const1;
-		public float Amplitude { get; set; } = 100.0f;
+
+		/// <summary>
+		///     The noise amplitude, the strength of this effect.
+		///     Default is 100f
+		/// </summary>
+		public float Amplitude { get; set; } = 100f;
+
+		/// <summary>
+		///     real_Amplitude := Amplitude * AmplitudeGen (currentAnimPercent)
+		///     Default is ExponentialDecr
+		/// </summary>
 		public SignalGen AmplitudeGen { get; set; } = ExponentialDecr ();
+
+		/// <summary>
+		///     Wheter the movement is combineable with other movement. Even if false, the movement takes place in local space.
+		///     Default is true
+		/// </summary>
 		public bool Relative { get; set; } = true;
+
 
 		public void Tick (float pc, GameObject gameObject)
 		{

@@ -14,7 +14,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 				.AddParalell (new IAnimPiece[]
 				{
 					new SimpleMovement { EndPos = new Vector2 (2500, 0) },
-					new CustomComponentUpdate<WritePercentComp> (),
+					new CustomComponentUpdate (),
 					new CallbackProvider
 					{
 						Callback = (pc, go) =>
