@@ -13,15 +13,12 @@ namespace MFEP.Duality.Plugins.Animation
 		private TimeSpan animStartTime;
 		private State state = State.Stopped;
 
-		public AnimationPlayer ()
-		{
-			PlaybackRate = 1.0f;
-		}
+		public float Percent { get; private set; }
 
 		public ContentRef<AnimResource> Animation { get; set; }
 		public bool AutoPlay { get; set; }
 		public bool Looping { get; set; }
-		public float PlaybackRate { get; set; }
+		public float PlaybackRate { get; set; } = 1f;
 
 		public float PlaybackLength
 		{
@@ -84,16 +81,16 @@ namespace MFEP.Duality.Plugins.Animation
 		private float GetAnimPercent ()
 		{
 			var currentTime = Time.GameTimer;
-			return accAnimPercent + (float) (currentTime - animStartTime).TotalSeconds / PlaybackLength;
+			return accAnimPercent + (float)(currentTime - animStartTime).TotalSeconds / PlaybackLength;
 		}
 
 		private void Animate ()
 		{
-			var animPercent = GetAnimPercent ();
-			if (animPercent >= 1.0)
+			Percent = GetAnimPercent ();
+			if (Percent >= 1.0)
 				if (Looping) {
-					while (animPercent >= 1.0f)
-						animPercent -= 1.0f;
+					while (Percent >= 1.0f)
+						Percent -= 1.0f;
 				} else {
 					IsPlaying = false;
 					return;
@@ -103,7 +100,7 @@ namespace MFEP.Duality.Plugins.Animation
 				return;
 			}
 
-			Animation.Res?.Tick (animPercent, GameObj);
+			Animation.Res?.Tick (Percent, GameObj);
 		}
 
 		private void InitializeResource ()

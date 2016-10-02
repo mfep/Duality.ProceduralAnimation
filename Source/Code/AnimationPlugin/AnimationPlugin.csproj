@@ -61,6 +61,7 @@
     <Compile Include="AnimationPlayer.cs" />
     <Compile Include="AnimPieces\CustomCallback.cs" />
     <Compile Include="AnimPieces\CustomComponentUpdate.cs" />
+    <Compile Include="AnimPieces\LerpNoiseMovement.cs" />
     <Compile Include="AnimPieces\Rotate.cs" />
     <Compile Include="AnimPieces\SimpleColor.cs" />
     <Compile Include="AnimPieces\SimpleMovement.cs" />

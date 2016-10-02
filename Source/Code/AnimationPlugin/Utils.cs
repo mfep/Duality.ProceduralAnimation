@@ -18,7 +18,8 @@ namespace MFEP.Duality.Plugins.Animation
 		public static SignalGen Const (float constValue) => x => constValue;
 		public static SignalGen Linear (float multiplier, float offset = 0.0f) => x => offset + x * multiplier;
 		public static SignalGen Polinomial (float exponent) => x => Pow (x, exponent);
-		public static SignalGen Exponential (float slope = 1.0f) => x => (Exp (x * slope) - 1) / (Exp (slope) - 1);
+		public static SignalGen ExponentialGrow (float slope = 1.0f) => x => (Exp (x * slope) - 1) / (Exp (slope) - 1);
+		public static SignalGen ExponentialDecr (float slope = 1.0f) => x => -1.0f * ExponentialGrow (slope) (x) + 1.0f;
 
 		public static SignalGen Sin (float freq, float amp = 1.0f, float phase = 0.0f, float offset = 0.0f)
 			=> x => offset + amp * MathF.Sin (x * freq * TwoPi + phase);

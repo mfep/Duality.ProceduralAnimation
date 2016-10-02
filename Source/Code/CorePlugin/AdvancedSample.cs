@@ -17,7 +17,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 						new PathFollowMovement
 						{
 							Closed = true,
-							SegmentSpeedGen = Exponential (3.0f),
+							SegmentSpeedGen = ExponentialGrow (3.0f),
 							PathVertices =
 								new[] { new Vector2 (-2500, 0), new Vector2 (0, -1500), new Vector2 (2500, 0), new Vector2 (0, 1500) }
 						},
