@@ -17,9 +17,12 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 					new TrigonometricMovement
 					{
 						Amplitude = new Vector2 (1000),
-						FreqGen = Linear (5),
-						AmpGen = AbsSin,
-						PhaseGen = SimpleCos
+						FreqGenX = Linear (5),
+						FreqGenY = Linear (5),
+						AmpGenX = AbsSin,
+						AmpGenY = AbsSin,
+						PhaseGenX = SimpleCos,
+						PhaseGenY = SimpleCos
 					}
 				}, 5.0f);
 		}

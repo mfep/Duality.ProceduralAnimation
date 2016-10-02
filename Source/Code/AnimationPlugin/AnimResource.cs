@@ -8,10 +8,7 @@ namespace MFEP.Duality.Plugins.Animation
 	{
 		[DontSerialize] private AnimBuilder builder;
 
-		public float OriginalLength
-		{
-			get { return builder?.OverallTime ?? 0.0f; }
-		}
+		public float OriginalLength => builder?.OverallTime ?? 0.0f;
 
 		protected abstract AnimBuilder InitializePieces ();
 
