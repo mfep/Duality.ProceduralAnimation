@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="AnimBuilder.cs" />
     <Compile Include="AnimationPlayer.cs" />
+    <Compile Include="AnimPieces\EllipseMovement.cs" />
     <Compile Include="AnimPieces\CustomCallback.cs" />
     <Compile Include="AnimPieces\CustomComponentUpdate.cs" />
     <Compile Include="AnimPieces\LerpNoiseMovement.cs" />

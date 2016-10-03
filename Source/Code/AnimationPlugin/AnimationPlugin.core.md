@@ -248,7 +248,7 @@ MFEP.Duality.Plugins.Animation.AnimPieces
 
 ##### Summary
 
-Implements random movement based on a simple noise algorhitm. The Direction attribute controls the direction of the movement.
+Implements random movement based on a simple noise algorithm. The Direction attribute controls the direction of the movement.
 
 <a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-LerpNoiseMovement-Amplitude'></a>
 ### Amplitude `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-LerpNoiseMovement-Amplitude 'Go To Here') [=](#contents 'Back To Contents')

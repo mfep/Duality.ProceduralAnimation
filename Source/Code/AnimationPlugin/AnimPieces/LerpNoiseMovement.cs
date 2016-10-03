@@ -5,7 +5,7 @@ using static MFEP.Duality.Plugins.Animation.Utils;
 namespace MFEP.Duality.Plugins.Animation.AnimPieces
 {
 	/// <summary>
-	///     Implements random movement based on a simple noise algorhitm. The Direction attribute controls the direction of the
+	///     Implements random movement based on a simple noise algorithm. The Direction attribute controls the direction of the
 	///     movement.
 	/// </summary>
 	public class LerpNoiseMovement : IAnimPiece
