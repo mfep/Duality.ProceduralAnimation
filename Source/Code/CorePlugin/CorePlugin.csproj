@@ -67,7 +67,7 @@
     <Compile Include="PathFollowMovementSample.cs" />
     <Compile Include="LinearMovementSample.cs" />
     <Compile Include="Properties\ResNames.cs" />
-    <Compile Include="TrigonometricMovementSample.cs" />
+    <Compile Include="TrigonometricMovement2DSample.cs" />
     <Compile Include="WritePercentComp.cs" />
   </ItemGroup>
   <ItemGroup>

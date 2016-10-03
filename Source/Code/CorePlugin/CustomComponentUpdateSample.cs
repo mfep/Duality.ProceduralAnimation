@@ -11,7 +11,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 		protected override AnimBuilder InitializePieces ()
 		{
 			return AnimBuilder.Start ()
-				.AddParalell (new IAnimPiece[]
+				.AddParallel (new IAnimPiece[]
 				{
 					new SimpleMovement { EndPos = new Vector2 (2500, 0) },
 					new CustomComponentUpdate (),

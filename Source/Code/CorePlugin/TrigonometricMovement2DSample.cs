@@ -7,14 +7,13 @@ using static MFEP.Duality.Plugins.Animation.Utils;
 namespace MFEP.Duality.Plugins.Animation.Sample
 {
 	[EditorHintCategory (ResNames.EditorCategory)]
-	public class TrigonometricMovementSample : AnimResource
+	public class TrigonometricMovement2DSample : AnimResource
 	{
 		protected override AnimBuilder InitializePieces ()
 		{
 			return AnimBuilder.Start ()
-				.AddParalell (new IAnimPiece[]
-				{
-					new TrigonometricMovement
+				.AddSingle (
+					new TrigonometricMovement2D
 					{
 						Amplitude = new Vector2 (1000),
 						FreqGenX = Linear (5),
@@ -23,8 +22,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 						AmpGenY = AbsSin,
 						PhaseGenX = SimpleCos,
 						PhaseGenY = SimpleCos
-					}
-				}, 5.0f);
+					}, 5.0f);
 		}
 	}
 }

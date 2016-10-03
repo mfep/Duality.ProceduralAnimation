@@ -69,7 +69,7 @@
     <Compile Include="AnimPieces\SimpleColor.cs" />
     <Compile Include="AnimPieces\SimpleMovement.cs" />
     <Compile Include="AnimPieces\PathFollowMovement.cs" />
-    <Compile Include="AnimPieces\TrigonometricMovement.cs" />
+    <Compile Include="AnimPieces\TrigonometricMovement2D.cs" />
     <Compile Include="AnimPieces\Wait.cs" />
     <Compile Include="Extras\AnimControllerComp.cs" />
     <Compile Include="Extras\PathVisualizer.cs" />

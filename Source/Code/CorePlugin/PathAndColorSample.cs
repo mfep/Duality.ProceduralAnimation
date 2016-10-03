@@ -12,7 +12,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 		protected override AnimBuilder InitializePieces ()
 		{
 			return AnimBuilder.Start ()
-				.AddParalell (new IAnimPiece[]
+				.AddParallel (new IAnimPiece[]
 				{
 					new PathFollowMovement
 					{
@@ -21,7 +21,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 					},
 					new SimpleColor { StartColor = ColorRgba.White, EndColor = ColorRgba.Blue }
 				}, 1.0f)
-				.AddParalell (new IAnimPiece[]
+				.AddParallel (new IAnimPiece[]
 				{
 					new SimpleColor { StartColor = ColorRgba.Blue, EndColor = ColorRgba.White },
 					new SimpleMovement { StartPos = new Vector2 (0, 0), EndPos = new Vector2 (1000, 0) }

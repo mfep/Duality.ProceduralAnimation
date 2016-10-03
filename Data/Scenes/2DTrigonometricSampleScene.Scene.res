@@ -152,10 +152,11 @@
           </item>
           <item dataType="Struct" type="MFEP.Duality.Plugins.Animation.AnimationPlayer" id="3028481768">
             <_x003C_Animation_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[MFEP.Duality.Plugins.Animation.AnimResource]]">
-              <contentPath dataType="String">Data\Animation Resource Samples\TrigonometricMovementSample.TrigonometricMovementSample.res</contentPath>
+              <contentPath dataType="String">Data\Animation Resource Samples\TrigonometricMovement2DSample.TrigonometricMovement2DSample.res</contentPath>
             </_x003C_Animation_x003E_k__BackingField>
             <_x003C_AutoPlay_x003E_k__BackingField dataType="Bool">true</_x003C_AutoPlay_x003E_k__BackingField>
             <_x003C_Looping_x003E_k__BackingField dataType="Bool">true</_x003C_Looping_x003E_k__BackingField>
+            <_x003C_Percent_x003E_k__BackingField dataType="Float">0</_x003C_Percent_x003E_k__BackingField>
             <_x003C_PlaybackRate_x003E_k__BackingField dataType="Float">0.75</_x003C_PlaybackRate_x003E_k__BackingField>
             <accAnimPercent dataType="Float">0</accAnimPercent>
             <active dataType="Bool">true</active>
@@ -185,12 +186,12 @@
               <vertexArraysFree dataType="Struct" type="System.Collections.Generic.List`1[[Duality.RawList`1[[Duality.Drawing.VertexC1P3T2]]]]" id="1253294030">
                 <_items dataType="Array" type="Duality.RawList`1[[Duality.Drawing.VertexC1P3T2]][]" id="764142032" length="0" />
                 <_size dataType="Int">0</_size>
-                <_version dataType="Int">42</_version>
+                <_version dataType="Int">48</_version>
               </vertexArraysFree>
               <vertexArraysUsed dataType="Struct" type="System.Collections.Generic.List`1[[Duality.RawList`1[[Duality.Drawing.VertexC1P3T2]]]]" id="1641518410">
                 <_items dataType="ObjectRef">764142032</_items>
                 <_size dataType="Int">0</_size>
-                <_version dataType="Int">42</_version>
+                <_version dataType="Int">48</_version>
               </vertexArraysUsed>
             </buffer>
             <gameobj dataType="ObjectRef">649790727</gameobj>

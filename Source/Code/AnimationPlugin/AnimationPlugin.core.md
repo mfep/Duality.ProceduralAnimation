@@ -10,7 +10,7 @@
   - [PlaybackLength](#P-MFEP-Duality-Plugins-Animation-AnimationPlayer-PlaybackLength 'MFEP.Duality.Plugins.Animation.AnimationPlayer.PlaybackLength')
   - [PlaybackRate](#P-MFEP-Duality-Plugins-Animation-AnimationPlayer-PlaybackRate 'MFEP.Duality.Plugins.Animation.AnimationPlayer.PlaybackRate')
 - [AnimBuilder](#T-MFEP-Duality-Plugins-Animation-AnimBuilder 'MFEP.Duality.Plugins.Animation.AnimBuilder')
-  - [AddParalell(pieces,time)](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-AddParalell-MFEP-Duality-Plugins-Animation-IAnimPiece[],System-Single- 'MFEP.Duality.Plugins.Animation.AnimBuilder.AddParalell(MFEP.Duality.Plugins.Animation.IAnimPiece[],System.Single)')
+  - [AddParallel(pieces,time)](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-AddParallel-MFEP-Duality-Plugins-Animation-IAnimPiece[],System-Single- 'MFEP.Duality.Plugins.Animation.AnimBuilder.AddParallel(MFEP.Duality.Plugins.Animation.IAnimPiece[],System.Single)')
   - [AddSingle(piece,time)](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-AddSingle-MFEP-Duality-Plugins-Animation-IAnimPiece,System-Single- 'MFEP.Duality.Plugins.Animation.AnimBuilder.AddSingle(MFEP.Duality.Plugins.Animation.IAnimPiece,System.Single)')
   - [Start()](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-Start 'MFEP.Duality.Plugins.Animation.AnimBuilder.Start')
 - [AnimControllerComp](#T-MFEP-Duality-Plugins-Animation-Extras-AnimControllerComp 'MFEP.Duality.Plugins.Animation.Extras.AnimControllerComp')
@@ -126,8 +126,8 @@ MFEP.Duality.Plugins.Animation
 
 Use this class to build the animation in your AnimResources. Supports fluent syntax.
 
-<a name='M-MFEP-Duality-Plugins-Animation-AnimBuilder-AddParalell-MFEP-Duality-Plugins-Animation-IAnimPiece[],System-Single-'></a>
-### AddParalell(pieces,time) `method` [#](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-AddParalell-MFEP-Duality-Plugins-Animation-IAnimPiece[],System-Single- 'Go To Here') [=](#contents 'Back To Contents')
+<a name='M-MFEP-Duality-Plugins-Animation-AnimBuilder-AddParallel-MFEP-Duality-Plugins-Animation-IAnimPiece[],System-Single-'></a>
+### AddParallel(pieces,time) `method` [#](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-AddParallel-MFEP-Duality-Plugins-Animation-IAnimPiece[],System-Single- 'Go To Here') [=](#contents 'Back To Contents')
 
 ##### Summary
 

@@ -3,7 +3,7 @@ using static MFEP.Duality.Plugins.Animation.Utils;
 
 namespace MFEP.Duality.Plugins.Animation.AnimPieces
 {
-	public class TrigonometricMovement : IAnimPiece
+	public class TrigonometricMovement2D : IAnimPiece
 	{
 		private Vector2 lastPos;
 		public Vector2 Frequency { get; set; } = Vector2.One;
