@@ -3,6 +3,9 @@ using Duality.Editor;
 
 namespace MFEP.Duality.Plugins.Animation
 {
+	/// <summary>
+	///     Inherit from this class when creating custom AnimResources. Have to implement the InitializePieces method.
+	/// </summary>
 	[EditorHintImage (ResNames.AnimResourceImagePath)]
 	public abstract class AnimResource : Resource
 	{

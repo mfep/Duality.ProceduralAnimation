@@ -9,7 +9,7 @@
   <sfxMasterVol dataType="Float">1</sfxMasterVol>
   <sfxMusicVol dataType="Float">1</sfxMusicVol>
   <sfxSpeechVol dataType="Float">1</sfxSpeechVol>
-  <systemCursorVisible dataType="Bool">false</systemCursorVisible>
+  <systemCursorVisible dataType="Bool">true</systemCursorVisible>
   <userName dataType="String">Unknown</userName>
 </root>
 <!-- XmlFormatterBase Document Separator -->

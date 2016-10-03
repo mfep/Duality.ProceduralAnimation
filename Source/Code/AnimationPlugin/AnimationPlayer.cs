@@ -4,6 +4,10 @@ using Duality.Editor;
 
 namespace MFEP.Duality.Plugins.Animation
 {
+	/// <summary>
+	///     Loads and plays AnimResources on the GameObject. Manages the animation's state, and provides interface to control
+	///     it (Play, Pause, Stop).
+	/// </summary>
 	[EditorHintCategory (ResNames.EditorCategory)]
 	[EditorHintImage (ResNames.AnimComponentImagePath)]
 	public class AnimationPlayer : Component, ICmpInitializable, ICmpUpdatable
@@ -13,13 +17,40 @@ namespace MFEP.Duality.Plugins.Animation
 		private TimeSpan animStartTime;
 		private State state = State.Stopped;
 
+		/// <summary>
+		///     The current animation progress. Between 0 and 1. Readonly for now.
+		/// </summary>
+		[EditorHintFlags (MemberFlags.ReadOnly)]
+		[EditorHintDecimalPlaces(3)]
 		public float Percent { get; private set; }
 
+		/// <summary>
+		///     The AnimResource that is played.
+		///     Default is null
+		/// </summary>
 		public ContentRef<AnimResource> Animation { get; set; }
+
+		/// <summary>
+		///     Wheter the animation starts at staring the game/sandbox.
+		///     Default is false
+		/// </summary>
 		public bool AutoPlay { get; set; }
+
+		/// <summary>
+		///     Wheter the animation starts from the beginning when reached its end.
+		///     Default is false
+		/// </summary>
 		public bool Looping { get; set; }
+
+		/// <summary>
+		///     The relative speed the animation is playing back.
+		///     Default is 1f
+		/// </summary>
 		public float PlaybackRate { get; set; } = 1f;
 
+		/// <summary>
+		///     The original length of the AnimResource multiplied by PlaybackRate
+		/// </summary>
 		public float PlaybackLength
 		{
 			get
@@ -29,6 +60,9 @@ namespace MFEP.Duality.Plugins.Animation
 			}
 		}
 
+		/// <summary>
+		///     Wheter the animation is currently playing or is stopped. Settable.
+		/// </summary>
 		public bool IsPlaying
 		{
 			get { return state == State.Playing; }
