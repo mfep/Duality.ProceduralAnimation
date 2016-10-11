@@ -6,3 +6,4 @@ before_build:
 
 build:
   project: Source\Code\ProjectPlugins.sln
+  verbosity: minimal
