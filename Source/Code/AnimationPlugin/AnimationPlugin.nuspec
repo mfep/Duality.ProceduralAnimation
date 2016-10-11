@@ -6,7 +6,7 @@
     <title>Procedural Animation</title>
     <authors>Lőrinc Serfőző</authors>
     <owners>Lőrinc Serfőző</owners>
-    <licenseUrl></licenseUrl>
+    <licenseUrl>https://github.com/mfep/Duality.ProceduralAnimation/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/mfep/Duality.ProceduralAnimation</projectUrl>
     <iconUrl>https://github.com/mfep/Duality.ProceduralAnimation/raw/master/Source/Code/AnimationPlugin/EmbeddedResources/man-sprinting.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -14,8 +14,13 @@
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Duality Core Plugin</tags>
-	<dependencies>
+    <dependencies>
       <dependency id="AdamsLair.Duality" version="2.7.0" />
-	</dependencies>
+    </dependencies>
   </metadata>
+  <files>
+    <file src="bin\Release\AnimationPlugin.core.dll" target="lib" />
+    <file src="bin\Release\AnimationPlugin.core.pdb" target="lib" />
+	<file src="bin\Release\AnimationPlugin.core.xml" target="lib" />
+  </files>
 </package>
