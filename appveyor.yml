@@ -1,5 +1,5 @@
 before_build:
-  - nuget restore
+  - nuget restore Source\Code\ProjectPlugins.sln
 
 build:
   project: Source\Code\ProjectPlugins.sln
