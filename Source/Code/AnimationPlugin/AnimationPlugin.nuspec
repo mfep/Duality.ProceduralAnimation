@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MFEP.Duality.Plugins.ProceduralAnimation</id>
+    <version>0.1.0</version>
+    <title>Procedural Animation</title>
+    <authors>Lőrinc Serfőző</authors>
+    <owners>Lőrinc Serfőző</owners>
+    <licenseUrl></licenseUrl>
+    <projectUrl>https://github.com/mfep/Duality.ProceduralAnimation</projectUrl>
+    <iconUrl>https://github.com/mfep/Duality.ProceduralAnimation/raw/master/Source/Code/AnimationPlugin/EmbeddedResources/man-sprinting.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Animate from code in Duality2D game engine.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Duality Core Plugin</tags>
+	<dependencies>
+      <dependency id="AdamsLair.Duality" version="2.7.0" />
+	</dependencies>
+  </metadata>
+</package>
