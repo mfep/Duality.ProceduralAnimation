@@ -10,14 +10,22 @@
   - [PlaybackLength](#P-MFEP-Duality-Plugins-Animation-AnimationPlayer-PlaybackLength 'MFEP.Duality.Plugins.Animation.AnimationPlayer.PlaybackLength')
   - [PlaybackRate](#P-MFEP-Duality-Plugins-Animation-AnimationPlayer-PlaybackRate 'MFEP.Duality.Plugins.Animation.AnimationPlayer.PlaybackRate')
 - [AnimBuilder](#T-MFEP-Duality-Plugins-Animation-AnimBuilder 'MFEP.Duality.Plugins.Animation.AnimBuilder')
-  - [AddParallel(pieces,time)](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-AddParallel-MFEP-Duality-Plugins-Animation-IAnimPiece[],System-Single- 'MFEP.Duality.Plugins.Animation.AnimBuilder.AddParallel(MFEP.Duality.Plugins.Animation.IAnimPiece[],System.Single)')
-  - [AddSingle(piece,time)](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-AddSingle-MFEP-Duality-Plugins-Animation-IAnimPiece,System-Single- 'MFEP.Duality.Plugins.Animation.AnimBuilder.AddSingle(MFEP.Duality.Plugins.Animation.IAnimPiece,System.Single)')
+  - [Add(piece,time)](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-Add-MFEP-Duality-Plugins-Animation-IAnimPiece,System-Single- 'MFEP.Duality.Plugins.Animation.AnimBuilder.Add(MFEP.Duality.Plugins.Animation.IAnimPiece,System.Single)')
+  - [Add(pieces,time)](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-Add-MFEP-Duality-Plugins-Animation-IAnimPiece[],System-Single- 'MFEP.Duality.Plugins.Animation.AnimBuilder.Add(MFEP.Duality.Plugins.Animation.IAnimPiece[],System.Single)')
   - [Start()](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-Start 'MFEP.Duality.Plugins.Animation.AnimBuilder.Start')
 - [AnimControllerComp](#T-MFEP-Duality-Plugins-Animation-Extras-AnimControllerComp 'MFEP.Duality.Plugins.Animation.Extras.AnimControllerComp')
 - [AnimResource](#T-MFEP-Duality-Plugins-Animation-AnimResource 'MFEP.Duality.Plugins.Animation.AnimResource')
 - [CallbackProvider](#T-MFEP-Duality-Plugins-Animation-AnimPieces-CallbackProvider 'MFEP.Duality.Plugins.Animation.AnimPieces.CallbackProvider')
   - [Callback](#P-MFEP-Duality-Plugins-Animation-AnimPieces-CallbackProvider-Callback 'MFEP.Duality.Plugins.Animation.AnimPieces.CallbackProvider.Callback')
 - [CustomComponentUpdate](#T-MFEP-Duality-Plugins-Animation-AnimPieces-CustomComponentUpdate 'MFEP.Duality.Plugins.Animation.AnimPieces.CustomComponentUpdate')
+- [EllipseMovement](#T-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement 'MFEP.Duality.Plugins.Animation.AnimPieces.EllipseMovement')
+  - [EndPhase](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-EndPhase 'MFEP.Duality.Plugins.Animation.AnimPieces.EllipseMovement.EndPhase')
+  - [RadiusX](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-RadiusX 'MFEP.Duality.Plugins.Animation.AnimPieces.EllipseMovement.RadiusX')
+  - [RadiusXGen](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-RadiusXGen 'MFEP.Duality.Plugins.Animation.AnimPieces.EllipseMovement.RadiusXGen')
+  - [RadiusY](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-RadiusY 'MFEP.Duality.Plugins.Animation.AnimPieces.EllipseMovement.RadiusY')
+  - [RadiusYGen](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-RadiusYGen 'MFEP.Duality.Plugins.Animation.AnimPieces.EllipseMovement.RadiusYGen')
+  - [Relative](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-Relative 'MFEP.Duality.Plugins.Animation.AnimPieces.EllipseMovement.Relative')
+  - [StartPhase](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-StartPhase 'MFEP.Duality.Plugins.Animation.AnimPieces.EllipseMovement.StartPhase')
 - [IAnimPiece](#T-MFEP-Duality-Plugins-Animation-IAnimPiece 'MFEP.Duality.Plugins.Animation.IAnimPiece')
 - [LerpNoiseMovement](#T-MFEP-Duality-Plugins-Animation-AnimPieces-LerpNoiseMovement 'MFEP.Duality.Plugins.Animation.AnimPieces.LerpNoiseMovement')
   - [Amplitude](#P-MFEP-Duality-Plugins-Animation-AnimPieces-LerpNoiseMovement-Amplitude 'MFEP.Duality.Plugins.Animation.AnimPieces.LerpNoiseMovement.Amplitude')
@@ -50,6 +58,17 @@
   - [PosGen](#P-MFEP-Duality-Plugins-Animation-AnimPieces-SimpleMovement-PosGen 'MFEP.Duality.Plugins.Animation.AnimPieces.SimpleMovement.PosGen')
   - [Relative](#P-MFEP-Duality-Plugins-Animation-AnimPieces-SimpleMovement-Relative 'MFEP.Duality.Plugins.Animation.AnimPieces.SimpleMovement.Relative')
   - [StartPos](#P-MFEP-Duality-Plugins-Animation-AnimPieces-SimpleMovement-StartPos 'MFEP.Duality.Plugins.Animation.AnimPieces.SimpleMovement.StartPos')
+- [TrigonometricMovement2D](#T-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D')
+  - [AmpGenX](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-AmpGenX 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D.AmpGenX')
+  - [AmpGenY](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-AmpGenY 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D.AmpGenY')
+  - [Amplitude](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-Amplitude 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D.Amplitude')
+  - [FreqGenX](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-FreqGenX 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D.FreqGenX')
+  - [FreqGenY](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-FreqGenY 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D.FreqGenY')
+  - [Frequency](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-Frequency 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D.Frequency')
+  - [Phase](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-Phase 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D.Phase')
+  - [PhaseGenX](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-PhaseGenX 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D.PhaseGenX')
+  - [PhaseGenY](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-PhaseGenY 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D.PhaseGenY')
+  - [Relative](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-Relative 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D.Relative')
 - [Wait](#T-MFEP-Duality-Plugins-Animation-AnimPieces-Wait 'MFEP.Duality.Plugins.Animation.AnimPieces.Wait')
 
 <a name='assembly'></a>
@@ -126,26 +145,8 @@ MFEP.Duality.Plugins.Animation
 
 Use this class to build the animation in your AnimResources. Supports fluent syntax.
 
-<a name='M-MFEP-Duality-Plugins-Animation-AnimBuilder-AddParallel-MFEP-Duality-Plugins-Animation-IAnimPiece[],System-Single-'></a>
-### AddParallel(pieces,time) `method` [#](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-AddParallel-MFEP-Duality-Plugins-Animation-IAnimPiece[],System-Single- 'Go To Here') [=](#contents 'Back To Contents')
-
-##### Summary
-
-Adds an array of AnimPieces that will play simultaneously.
-
-##### Returns
-
-
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| pieces | [MFEP.Duality.Plugins.Animation.IAnimPiece[]](#T-MFEP-Duality-Plugins-Animation-IAnimPiece[] 'MFEP.Duality.Plugins.Animation.IAnimPiece[]') |  |
-| time | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | Time (seconds) these pieces will take to finish. |
-
-<a name='M-MFEP-Duality-Plugins-Animation-AnimBuilder-AddSingle-MFEP-Duality-Plugins-Animation-IAnimPiece,System-Single-'></a>
-### AddSingle(piece,time) `method` [#](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-AddSingle-MFEP-Duality-Plugins-Animation-IAnimPiece,System-Single- 'Go To Here') [=](#contents 'Back To Contents')
+<a name='M-MFEP-Duality-Plugins-Animation-AnimBuilder-Add-MFEP-Duality-Plugins-Animation-IAnimPiece,System-Single-'></a>
+### Add(piece,time) `method` [#](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-Add-MFEP-Duality-Plugins-Animation-IAnimPiece,System-Single- 'Go To Here') [=](#contents 'Back To Contents')
 
 ##### Summary
 
@@ -161,6 +162,24 @@ Adds a single AnimPiece to the animation chain.
 | ---- | ---- | ----------- |
 | piece | [MFEP.Duality.Plugins.Animation.IAnimPiece](#T-MFEP-Duality-Plugins-Animation-IAnimPiece 'MFEP.Duality.Plugins.Animation.IAnimPiece') | The IAnimPiece to add. |
 | time | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | The time (seconds) this AnimPiece takes to finish. |
+
+<a name='M-MFEP-Duality-Plugins-Animation-AnimBuilder-Add-MFEP-Duality-Plugins-Animation-IAnimPiece[],System-Single-'></a>
+### Add(pieces,time) `method` [#](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-Add-MFEP-Duality-Plugins-Animation-IAnimPiece[],System-Single- 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+Adds an array of AnimPieces that will play simultaneously.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| pieces | [MFEP.Duality.Plugins.Animation.IAnimPiece[]](#T-MFEP-Duality-Plugins-Animation-IAnimPiece[] 'MFEP.Duality.Plugins.Animation.IAnimPiece[]') |  |
+| time | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | Time (seconds) these pieces will take to finish. |
 
 <a name='M-MFEP-Duality-Plugins-Animation-AnimBuilder-Start'></a>
 ### Start() `method` [#](#M-MFEP-Duality-Plugins-Animation-AnimBuilder-Start 'Go To Here') [=](#contents 'Back To Contents')
@@ -227,6 +246,66 @@ MFEP.Duality.Plugins.Animation.AnimPieces
 ##### Summary
 
 This AnimPiece invokes the AnimTickCallback function on every Component which implements ICmpAnimUpdatable on the AnimationPlayer's GameObject.
+
+<a name='T-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement'></a>
+## EllipseMovement [#](#T-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Namespace
+
+MFEP.Duality.Plugins.Animation.AnimPieces
+
+##### Summary
+
+Moves the gameObject on an elliptical arc. This path can be a circle/ellipse/circular arc depending on the parameters.
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-EndPhase'></a>
+### EndPhase `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-EndPhase 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+The ending phase angle on the path in radians. Default is 0f
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-RadiusX'></a>
+### RadiusX `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-RadiusX 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+The size of the path ellipse on the X axis. Default is 200f
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-RadiusXGen'></a>
+### RadiusXGen `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-RadiusXGen 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+RadiusX's multiplier function. Default is Const1
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-RadiusY'></a>
+### RadiusY `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-RadiusY 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+The size of the path ellipse on the Y axis. Default is 200f
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-RadiusYGen'></a>
+### RadiusYGen `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-RadiusYGen 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+RadiusY's multiplier function. Default is Const1
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-Relative'></a>
+### Relative `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-Relative 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+Wheter the movement is combineable with other movement. Even if false, the movement takes place in local space. Default is true
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-StartPhase'></a>
+### StartPhase `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-EllipseMovement-StartPhase 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+The starting phase angle on the path in radians. Determines the starting point on the arc. 0 means the most right point, Pi/2 is the bottom one, and so along. Default is 0f
 
 <a name='T-MFEP-Duality-Plugins-Animation-IAnimPiece'></a>
 ## IAnimPiece [#](#T-MFEP-Duality-Plugins-Animation-IAnimPiece 'Go To Here') [=](#contents 'Back To Contents')
@@ -483,6 +562,87 @@ Wheter the movement is combineable with other movement. Even if false, the movem
 ##### Summary
 
 Starting position of the animation. Local space. Default is Vector2.Zero
+
+<a name='T-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D'></a>
+## TrigonometricMovement2D [#](#T-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Namespace
+
+MFEP.Duality.Plugins.Animation.AnimPieces
+
+##### Summary
+
+Provides more advanced controls over the trigonometric functions which move the gameObject. Simpler version is EllipseMovement. Consists of two trigonometric expression: one in the X, one in the Y direction.
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-AmpGenX'></a>
+### AmpGenX `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-AmpGenX 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+Amplitude multiplier function in the X direction. Default is Const1
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-AmpGenY'></a>
+### AmpGenY `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-AmpGenY 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+Amplitude multiplier function in the Y direction. Default is Const1
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-Amplitude'></a>
+### Amplitude `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-Amplitude 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+The magnitude of the movement in X and Y direction. Default is Vector2 (200f, 200f)
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-FreqGenX'></a>
+### FreqGenX `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-FreqGenX 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+Frequency multiplier function in the X direction. Default is Const1
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-FreqGenY'></a>
+### FreqGenY `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-FreqGenY 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+Frequency multiplier function in the Y direction. Default is Const1
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-Frequency'></a>
+### Frequency `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-Frequency 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+The 'speed' of the trigonometric functions in the X and Y directions. The frequency of 1 means one period over the animation. Default is Vector2.One
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-Phase'></a>
+### Phase `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-Phase 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+The phase of the trigonometric expression in X and Y direction. Default is Vector2.Zero
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-PhaseGenX'></a>
+### PhaseGenX `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-PhaseGenX 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+Phase multiplier function in the X direction.
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-PhaseGenY'></a>
+### PhaseGenY `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-PhaseGenY 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+Phase multiplier function in the Y direction.
+
+<a name='P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-Relative'></a>
+### Relative `property` [#](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-Relative 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+Wheter the movement is combineable with other movement. Even if false, the movement takes place in local space. Default is true
 
 <a name='T-MFEP-Duality-Plugins-Animation-AnimPieces-Wait'></a>
 ## Wait [#](#T-MFEP-Duality-Plugins-Animation-AnimPieces-Wait 'Go To Here') [=](#contents 'Back To Contents')

@@ -11,7 +11,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 	{
 		protected override AnimBuilder InitializePieces ()
 		{
-			return AnimBuilder.Start ().AddParallel (new IAnimPiece[]
+			return AnimBuilder.Start ().Add (new IAnimPiece[]
 				{
 					new LerpNoiseMovement { Frequency = 10f, FrequencyGen = Linear(7f, 1f), AmplitudeGen = Const1, Direction = Vector2.UnitX, Amplitude = 500f},
 					new LerpNoiseMovement { Frequency = 20f, Direction = Vector2.UnitY, Amplitude = 200f}

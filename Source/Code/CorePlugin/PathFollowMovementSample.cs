@@ -11,22 +11,22 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 		protected override AnimBuilder InitializePieces ()
 		{
 			return AnimBuilder.Start ()
-				.AddSingle (
+				.Add (
 					new PathFollowMovement
 					{
 						PathVertices = new[] { new Vector2 (0, 0), new Vector2 (300, 0), new Vector2 (0, 300), new Vector2 (0, 0) },
 						ConstantVelocity = true
 					}, 2.0f)
-				.AddSingle (
+				.Add (
 					new SimpleMovement { StartPos = new Vector2 (0, 0), EndPos = new Vector2 (500, 500) }, 3.0f
 				)
-				.AddSingle (
+				.Add (
 					new PathFollowMovement
 					{
 						PathVertices = new[] { new Vector2 (500, 500), new Vector2 (500, 600), new Vector2 (1000, 2000) }
 					}, 5.0f)
-				.AddSingle (new Wait (), 3.0f)
-				.AddSingle (
+				.Add (new Wait (), 3.0f)
+				.Add (
 					new SimpleMovement { StartPos = new Vector2 (1000, 2000), EndPos = new Vector2 (0, 0) }, 2.0f
 				);
 		}

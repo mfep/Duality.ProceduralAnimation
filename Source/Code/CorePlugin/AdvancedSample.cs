@@ -12,7 +12,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 		protected override AnimBuilder InitializePieces ()
 		{
 			return AnimBuilder.Start ()
-				.AddParallel (new IAnimPiece[]
+				.Add (new IAnimPiece[]
 					{
 						new PathFollowMovement
 						{

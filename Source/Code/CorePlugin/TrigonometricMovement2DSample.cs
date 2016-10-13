@@ -12,7 +12,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 		protected override AnimBuilder InitializePieces ()
 		{
 			return AnimBuilder.Start ()
-				.AddSingle (
+				.Add (
 					new TrigonometricMovement2D
 					{
 						Amplitude = new Vector2 (1000),

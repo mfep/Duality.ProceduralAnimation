@@ -34,7 +34,7 @@ namespace MFEP.Duality.Plugins.Animation
 		/// <param name="piece">The IAnimPiece to add.</param>
 		/// <param name="time">The time (seconds) this AnimPiece takes to finish.</param>
 		/// <returns></returns>
-		public AnimBuilder AddSingle (IAnimPiece piece, float time)
+		public AnimBuilder Add (IAnimPiece piece, float time)
 		{
 			CheckTime (time);
 			piece.Initialize ();
@@ -49,7 +49,7 @@ namespace MFEP.Duality.Plugins.Animation
 		/// <param name="pieces"></param>
 		/// <param name="time">Time (seconds) these pieces will take to finish.</param>
 		/// <returns></returns>
-		public AnimBuilder AddParallel (IAnimPiece[] pieces, float time)
+		public AnimBuilder Add (IAnimPiece[] pieces, float time)
 		{
 			CheckTime (time);
 			foreach (var piece in pieces) piece.Initialize ();

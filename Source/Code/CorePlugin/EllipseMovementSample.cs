@@ -10,7 +10,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 		protected override AnimBuilder InitializePieces ()
 		{
 			return AnimBuilder.Start ()
-				.AddSingle (
+				.Add (
 					new EllipseMovement { StartPhase = 270f, EndPhase = 270f - 360f, RadiusX = 600f}, 5.0f
 				);
 		}
