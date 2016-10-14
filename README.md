@@ -1,5 +1,5 @@
 # Duality.ProceduralAnimation
-
+[![Build status](https://ci.appveyor.com/api/projects/status/vml8qiiaen1wsagf?svg=true)](https://ci.appveyor.com/project/mfep/duality-proceduralanimation)
 ## Overview
 The ProceduralAnimation plugin is a Core Plugin for the [Duality2D](http://duality.adamslair.net/) open source game engine.
 It helps to create complex behaviours, mainly on the field of gameObject movement, however other usages are possible too.
