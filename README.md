@@ -18,12 +18,19 @@ which are difficult to achieve using the keyframe technique.
 
 In addition, the plugin has a modular architecture, thus extending it does not require any change to the existing code.
 
+**Please note, that the plugin is in beta state, which means bugs are most likely present, and breaking changes will occur.**
+
 ## Features
 * Animate `GameObject`s in the scene using functional patterns
 * Combine multiple animation methods into animation chains using simple fluent syntax API
 * Animation chains can run animations in series, or in a parallel manner, or both combined in one chain
 * Define the animation in C# code - no need to learn a different syntax/markup language
 * Core only plugin - seriously, who needs a graphical editor?
+
+## Installation
+1. Download the plugin via Duality's package manager.
+   It's located in the File menu, select the plugin in from the 'Online Repository' list and click 'Install' then 'Apply'.
+2. In your Visual Studio solution add the newly downloaded Plugins\AnimationPlugin.core.dll as a reference.
 
 ## Parts of the system
 The repo consists of two Visual Studio projects, thus two NuGet packages are available in Duality's package manager.
@@ -77,3 +84,17 @@ public class MyAnimResource : AnimResource
   }
 }
 ```
+
+### AnimPieces
+The building blocks of an animation. There are plenty of 'pieces
+ready to use, including the former presented `SimpleMovement` and `SimpleColor` which are - as the name suggests - the
+lighter ones, but more convoluted pieces exist, like `PathFollowMovement`, `CustomComponentUpdate`, or `TrigonometricMovement2D`
+just to name a few. They all have their parameters and properties documented in the [Class Reference](https://github.com/mfep/Duality.ProceduralAnimation/wiki/Class-Reference), feel free to experiment with them.
+
+Which gives you even more freedom designing your animations is to implement your own AnimPieces. For that, a class is needed
+implementing the `IAnimPiece` interface. Here are the two functions of the interface:
+* `void Initialize ();` is called every time the animation is started (even when started from a paused state). If you don't have
+  anything to do here, just leave the function block empty.
+* `void Tick (float pc, GameObject gameObject);` is called in every `OnUpdate ()` of the respecting `AnimationPlayer`.
+  The parameter `pc` provides the current 'percent' of the animation, a number between 0 and 1. Thus the AnimPieces don't know
+  about the actual time the animation takes, nor about the other animations in the chain.
