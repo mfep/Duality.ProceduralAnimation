@@ -20,7 +20,7 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 		///     The mapping of the angular movement.
 		///     Default value is Unity
 		/// </summary>
-		public SignalGen FrequencyGen { get; set; } = Unity;
+		public SignalGen FrequencyGen { get; set; } = Const1;
 
 		/// <summary>
 		///     Wheter this Piece's effect overrides all other rotation.
@@ -30,7 +30,7 @@ namespace MFEP.Duality.Plugins.Animation.AnimPieces
 
 		public void Tick (float pc, GameObject gameObject)
 		{
-			var newTurn = FrequencyGen (pc) * Frequency * MathF.TwoPi;
+			var newTurn = pc * FrequencyGen (pc) * Frequency * MathF.TwoPi;
 			if (Relative) {
 				gameObject.Transform.TurnBy (newTurn - lastTurn);
 				lastTurn = newTurn;

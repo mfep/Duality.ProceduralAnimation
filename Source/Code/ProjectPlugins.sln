@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationPlugin", "AnimationPlugin\AnimationPlugin.csproj", "{AFE883F3-72B4-4C7C-A1D1-44EDC09C8F6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorePlugin", "CorePlugin\CorePlugin.csproj", "{AB716A38-0C92-46AE-A06D-AEC93092B96F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationPlugin.Sample", "CorePlugin\AnimationPlugin.Sample.csproj", "{AB716A38-0C92-46AE-A06D-AEC93092B96F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AFE883F3-72B4-4C7C-A1D1-44EDC09C8F6E} = {AFE883F3-72B4-4C7C-A1D1-44EDC09C8F6E}
 	EndProjectSection

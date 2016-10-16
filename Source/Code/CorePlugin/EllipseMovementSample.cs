@@ -1,4 +1,5 @@
-﻿using Duality.Editor;
+﻿using Duality;
+using Duality.Editor;
 using MFEP.Duality.Plugins.Animation.AnimPieces;
 using MFEP.Duality.Plugins.Animation.Sample.Properties;
 
@@ -11,7 +12,7 @@ namespace MFEP.Duality.Plugins.Animation.Sample
 		{
 			return AnimBuilder.Start ()
 				.Add (
-					new EllipseMovement { StartPhase = 270f, EndPhase = 270f - 360f, RadiusX = 600f}, 5.0f
+					new EllipseMovement { StartPhase = 0f, EndPhase = MathF.PiOver2, RadiusX = 600f}, 1.0f
 				);
 		}
 	}
