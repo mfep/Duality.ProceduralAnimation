@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>MFEP.Duality.Plugins.ProceduralAnimation</id>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
     <title>Procedural Animation</title>
     <authors>Lőrinc Serfőző</authors>
     <owners>Lőrinc Serfőző</owners>
