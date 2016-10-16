@@ -99,5 +99,36 @@ implementing the `IAnimPiece` interface. Here are the two functions of the inter
   The parameter `pc` provides the current 'percent' of the animation, a number between 0 and 1. Thus the AnimPieces don't know
   about the actual time the animation takes, nor about the other animations in the chain.
   
-  *If you created some new 'pieces, please consider contributing it to this repository.
-  Ideas for new 'pieces are also very welcome.*
+*If you created some new 'pieces, please consider contributing it to this repository.
+Ideas for new 'pieces are also very welcome.*
+  
+### SignalGen
+Many AnimPieces have attributes with the type of `SignalGen`. It's a delegate type, which defines a `float` returning
+function with a single `float` argument. These enable an advanced feature of the toolkit: to modulate the AnimPiece's
+parameters over time using an arbitrary mathemathical function. These functions always get `pc`, the animation percent as 
+input, and usually multiply their respecting parameter with their return value.
+An example: One would like to create a spinning animation, but with increasing angular velocity over time. For that
+the `Rotate` AnimPiece.
+
+```csharp
+public class SpeedupRotation : AnimResource
+{
+  protected override AnimBuilder InitializePieces ()
+  {
+    return AnimBuilder.Start ()
+    // default frequency is 1, which means 1 rotation over the animation
+    // the frequency is multiplied by FrequencyGen (pc)
+    // in this example, the frequency starts at 1, and to the end of the animation (which takes 3 seconds)
+    // it linearly grows to 2
+    .Add (new Rotate { FrequencyGen = x => x + 1, 3.0f)
+  }
+}
+```
+
+### Utils
+is a static class providing helper functions to create `SignalGen` functions. A trivial example would be to use the `Utils.Linear` function in the former code sample:
+
+```csharp
+    .Add (new Rotate { FrequencyGen = Utils.Linear (/*multiplier=*/ 1, /*offset=*/ 1), 3.0f)
+```
+Of course, there are more complicated functions in `Utils`, such as trigonometric and exponential ones.
