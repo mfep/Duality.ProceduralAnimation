@@ -27,6 +27,8 @@ In addition, the plugin has a modular architecture, thus extending it does not r
 * Define the animation in C# code - no need to learn a different syntax/markup language
 * Core only plugin - seriously, who needs a graphical editor?
 
+## [GIFs and code samples](https://github.com/mfep/Duality.ProceduralAnimation/blob/master/samples.md)
+
 ## Installation
 1. Download the plugin via Duality's package manager.
    It's located in the File menu, select the plugin in from the 'Online Repository' list and click 'Install' then 'Apply'.
