@@ -1,6 +1,6 @@
 ﻿<root dataType="Struct" type="Duality.DualityAppData" id="129723834">
   <appName dataType="String">ProceduralAnimation</appName>
-  <authorName dataType="String">Lorinc</authorName>
+  <authorName dataType="String">mfep</authorName>
   <customData />
   <localUserData dataType="Bool">true</localUserData>
   <multisampleBackBuffer dataType="Bool">true</multisampleBackBuffer>
@@ -12,7 +12,7 @@
   <startScene dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
     <contentPath dataType="String">Data\Scenes\AdvancedScene.Scene.res</contentPath>
   </startScene>
-  <version dataType="UInt">377</version>
-  <websiteUrl dataType="String">http://www.adamslair.net</websiteUrl>
+  <version dataType="UInt">0</version>
+  <websiteUrl dataType="String"></websiteUrl>
 </root>
 <!-- XmlFormatterBase Document Separator -->
