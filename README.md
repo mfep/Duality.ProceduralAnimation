@@ -98,3 +98,6 @@ implementing the `IAnimPiece` interface. Here are the two functions of the inter
 * `void Tick (float pc, GameObject gameObject);` is called in every `OnUpdate ()` of the respecting `AnimationPlayer`.
   The parameter `pc` provides the current 'percent' of the animation, a number between 0 and 1. Thus the AnimPieces don't know
   about the actual time the animation takes, nor about the other animations in the chain.
+  
+  *If you created some new 'pieces, please consider contributing it to this repository.
+  Ideas for new 'pieces are also very welcome.*
