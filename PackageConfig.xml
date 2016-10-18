@@ -2,7 +2,6 @@
 <PackageConfig>
   <RepositoryUrl>https://packages.nuget.org/api/v2</RepositoryUrl>
   <Packages>
-    <Package id="AdamsLair.Duality.Launcher" version="2.2.0.0" />
     <Package id="AdamsLair.Duality.Backend.DotNetFramework" version="2.1.0.0" />
     <Package id="AdamsLair.Duality.Plugins.Compatibility" version="2.0.1.0" />
     <Package id="AdamsLair.Duality.Docs" version="2.0.0.0" />
@@ -13,10 +12,11 @@
     <Package id="AdamsLair.Duality.Editor.Plugins.SceneView" version="2.0.8.0" />
     <Package id="AdamsLair.Duality.Editor.Plugins.PackageManagerFrontend" version="2.0.5.0" />
     <Package id="AdamsLair.Duality.Editor.Backend.DefaultOpenTK" version="2.0.3.0" />
-    <Package id="AdamsLair.Duality" version="2.7.12.0" />
-    <Package id="AdamsLair.Duality.Editor" version="2.6.10.0" />
     <Package id="AdamsLair.Duality.Editor.Plugins.Base" version="2.2.3.0" />
     <Package id="AdamsLair.Duality.Editor.Plugins.CamView" version="2.3.6.0" />
     <Package id="AdamsLair.Duality.Editor.Plugins.ObjectInspector" version="2.0.4.0" />
+    <Package id="AdamsLair.Duality" version="2.8.0.0" />
+    <Package id="AdamsLair.Duality.Launcher" version="2.3.0.0" />
+    <Package id="AdamsLair.Duality.Editor" version="2.7.0.0" />
   </Packages>
 </PackageConfig>
