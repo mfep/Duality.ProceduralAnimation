@@ -69,6 +69,21 @@
   - [PhaseGenX](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-PhaseGenX 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D.PhaseGenX')
   - [PhaseGenY](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-PhaseGenY 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D.PhaseGenY')
   - [Relative](#P-MFEP-Duality-Plugins-Animation-AnimPieces-TrigonometricMovement2D-Relative 'MFEP.Duality.Plugins.Animation.AnimPieces.TrigonometricMovement2D.Relative')
+- [Utils](#T-MFEP-Duality-Plugins-Animation-Utils 'MFEP.Duality.Plugins.Animation.Utils')
+  - [AbsCos](#P-MFEP-Duality-Plugins-Animation-Utils-AbsCos 'MFEP.Duality.Plugins.Animation.Utils.AbsCos')
+  - [AbsSin](#P-MFEP-Duality-Plugins-Animation-Utils-AbsSin 'MFEP.Duality.Plugins.Animation.Utils.AbsSin')
+  - [Const1](#P-MFEP-Duality-Plugins-Animation-Utils-Const1 'MFEP.Duality.Plugins.Animation.Utils.Const1')
+  - [SimpleCos](#P-MFEP-Duality-Plugins-Animation-Utils-SimpleCos 'MFEP.Duality.Plugins.Animation.Utils.SimpleCos')
+  - [SimpleSin](#P-MFEP-Duality-Plugins-Animation-Utils-SimpleSin 'MFEP.Duality.Plugins.Animation.Utils.SimpleSin')
+  - [SmoothStep](#P-MFEP-Duality-Plugins-Animation-Utils-SmoothStep 'MFEP.Duality.Plugins.Animation.Utils.SmoothStep')
+  - [Unity](#P-MFEP-Duality-Plugins-Animation-Utils-Unity 'MFEP.Duality.Plugins.Animation.Utils.Unity')
+  - [Const(constValue)](#M-MFEP-Duality-Plugins-Animation-Utils-Const-System-Single- 'MFEP.Duality.Plugins.Animation.Utils.Const(System.Single)')
+  - [Cos(freq,amp,phase,offset)](#M-MFEP-Duality-Plugins-Animation-Utils-Cos-System-Single,System-Single,System-Single,System-Single- 'MFEP.Duality.Plugins.Animation.Utils.Cos(System.Single,System.Single,System.Single,System.Single)')
+  - [ExponentialDecr(slope)](#M-MFEP-Duality-Plugins-Animation-Utils-ExponentialDecr-System-Single- 'MFEP.Duality.Plugins.Animation.Utils.ExponentialDecr(System.Single)')
+  - [ExponentialGrow(slope)](#M-MFEP-Duality-Plugins-Animation-Utils-ExponentialGrow-System-Single- 'MFEP.Duality.Plugins.Animation.Utils.ExponentialGrow(System.Single)')
+  - [Linear(multiplier,offset)](#M-MFEP-Duality-Plugins-Animation-Utils-Linear-System-Single,System-Single- 'MFEP.Duality.Plugins.Animation.Utils.Linear(System.Single,System.Single)')
+  - [Polinomial(exponent)](#M-MFEP-Duality-Plugins-Animation-Utils-Polinomial-System-Single- 'MFEP.Duality.Plugins.Animation.Utils.Polinomial(System.Single)')
+  - [Sin(freq,amp,phase,offset)](#M-MFEP-Duality-Plugins-Animation-Utils-Sin-System-Single,System-Single,System-Single,System-Single- 'MFEP.Duality.Plugins.Animation.Utils.Sin(System.Single,System.Single,System.Single,System.Single)')
 - [Wait](#T-MFEP-Duality-Plugins-Animation-AnimPieces-Wait 'MFEP.Duality.Plugins.Animation.AnimPieces.Wait')
 
 <a name='assembly'></a>
@@ -643,6 +658,160 @@ Phase multiplier function in the Y direction.
 ##### Summary
 
 Wheter the movement is combineable with other movement. Even if false, the movement takes place in local space. Default is true
+
+<a name='T-MFEP-Duality-Plugins-Animation-Utils'></a>
+## Utils [#](#T-MFEP-Duality-Plugins-Animation-Utils 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Namespace
+
+MFEP.Duality.Plugins.Animation
+
+<a name='P-MFEP-Duality-Plugins-Animation-Utils-AbsCos'></a>
+### AbsCos `property` [#](#P-MFEP-Duality-Plugins-Animation-Utils-AbsCos 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = |cos(2πx)|
+
+<a name='P-MFEP-Duality-Plugins-Animation-Utils-AbsSin'></a>
+### AbsSin `property` [#](#P-MFEP-Duality-Plugins-Animation-Utils-AbsSin 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = |sin(2πx)|
+
+<a name='P-MFEP-Duality-Plugins-Animation-Utils-Const1'></a>
+### Const1 `property` [#](#P-MFEP-Duality-Plugins-Animation-Utils-Const1 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = 1
+
+<a name='P-MFEP-Duality-Plugins-Animation-Utils-SimpleCos'></a>
+### SimpleCos `property` [#](#P-MFEP-Duality-Plugins-Animation-Utils-SimpleCos 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = cos(2πx)
+
+<a name='P-MFEP-Duality-Plugins-Animation-Utils-SimpleSin'></a>
+### SimpleSin `property` [#](#P-MFEP-Duality-Plugins-Animation-Utils-SimpleSin 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = sin(2πx)
+
+<a name='P-MFEP-Duality-Plugins-Animation-Utils-SmoothStep'></a>
+### SmoothStep `property` [#](#P-MFEP-Duality-Plugins-Animation-Utils-SmoothStep 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = 3x^2 - 2x^3
+
+<a name='P-MFEP-Duality-Plugins-Animation-Utils-Unity'></a>
+### Unity `property` [#](#P-MFEP-Duality-Plugins-Animation-Utils-Unity 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = x
+
+<a name='M-MFEP-Duality-Plugins-Animation-Utils-Const-System-Single-'></a>
+### Const(constValue) `method` [#](#M-MFEP-Duality-Plugins-Animation-Utils-Const-System-Single- 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = c
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| constValue | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | c |
+
+<a name='M-MFEP-Duality-Plugins-Animation-Utils-Cos-System-Single,System-Single,System-Single,System-Single-'></a>
+### Cos(freq,amp,phase,offset) `method` [#](#M-MFEP-Duality-Plugins-Animation-Utils-Cos-System-Single,System-Single,System-Single,System-Single- 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = cos(2πfx + φ) + c
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| freq | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | f |
+| amp | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | A |
+| phase | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | φ |
+| offset | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | c |
+
+<a name='M-MFEP-Duality-Plugins-Animation-Utils-ExponentialDecr-System-Single-'></a>
+### ExponentialDecr(slope) `method` [#](#M-MFEP-Duality-Plugins-Animation-Utils-ExponentialDecr-System-Single- 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = - (e^(sx) - 1) / (e^s - 1) + 1
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| slope | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | s |
+
+<a name='M-MFEP-Duality-Plugins-Animation-Utils-ExponentialGrow-System-Single-'></a>
+### ExponentialGrow(slope) `method` [#](#M-MFEP-Duality-Plugins-Animation-Utils-ExponentialGrow-System-Single- 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = (e^(sx) - 1) / (e^s - 1)
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| slope | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | s |
+
+<a name='M-MFEP-Duality-Plugins-Animation-Utils-Linear-System-Single,System-Single-'></a>
+### Linear(multiplier,offset) `method` [#](#M-MFEP-Duality-Plugins-Animation-Utils-Linear-System-Single,System-Single- 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = ax + b
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| multiplier | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | a |
+| offset | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | b |
+
+<a name='M-MFEP-Duality-Plugins-Animation-Utils-Polinomial-System-Single-'></a>
+### Polinomial(exponent) `method` [#](#M-MFEP-Duality-Plugins-Animation-Utils-Polinomial-System-Single- 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = x^n
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| exponent | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | n |
+
+<a name='M-MFEP-Duality-Plugins-Animation-Utils-Sin-System-Single,System-Single,System-Single,System-Single-'></a>
+### Sin(freq,amp,phase,offset) `method` [#](#M-MFEP-Duality-Plugins-Animation-Utils-Sin-System-Single,System-Single,System-Single,System-Single- 'Go To Here') [=](#contents 'Back To Contents')
+
+##### Summary
+
+f(x) = sin(2πfx + φ) + c
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| freq | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | f |
+| amp | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | A |
+| phase | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | φ |
+| offset | [System.Single](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Single 'System.Single') | c |
 
 <a name='T-MFEP-Duality-Plugins-Animation-AnimPieces-Wait'></a>
 ## Wait [#](#T-MFEP-Duality-Plugins-Animation-AnimPieces-Wait 'Go To Here') [=](#contents 'Back To Contents')
