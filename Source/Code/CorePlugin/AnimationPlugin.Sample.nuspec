@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>MFEP.Duality.Plugins.ProceduralAnimation.Sample</id>
-    <version>0.1.5</version>
+    <version>0.1.6</version>
     <title>Procedural Animation Samples</title>
     <authors>Lőrinc Serfőző</authors>
     <owners>Lőrinc Serfőző</owners>
@@ -11,12 +11,12 @@
     <iconUrl>https://github.com/mfep/Duality.ProceduralAnimation/raw/master/sprinting-64.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Animate from code in Duality2D game engine.</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>Real World Examples</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Duality Sample Plugin Animation</tags>
     <dependencies>
       <dependency id="AdamsLair.Duality" version="2.7.0" />
-      <dependency id="MFEP.Duality.Plugins.ProceduralAnimation" version="0.1.5" />
+      <dependency id="MFEP.Duality.Plugins.ProceduralAnimation" version="0.1.6" />
     </dependencies>
   </metadata>
   <files>
