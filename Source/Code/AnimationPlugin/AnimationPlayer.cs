@@ -13,7 +13,7 @@ namespace MFEP.Duality.Plugins.Animation
 	public class AnimationPlayer : Component, ICmpInitializable, ICmpUpdatable
 	{
 		private float accAnimPercent;
-
+		private ContentRef<AnimResource> animation;
 		private TimeSpan animStartTime;
 		private State state = State.Stopped;
 
@@ -28,7 +28,11 @@ namespace MFEP.Duality.Plugins.Animation
 		///     The AnimResource that is played.
 		///     Default is null
 		/// </summary>
-		public ContentRef<AnimResource> Animation { get; set; }
+		public ContentRef<AnimResource> Animation
+		{
+			get { return animation; }
+			set { animation = value; InitializeResource(); }
+		}
 
 		/// <summary>
 		///     Wheter the animation starts at staring the game/sandbox.
@@ -107,6 +111,7 @@ namespace MFEP.Duality.Plugins.Animation
 
 		public void Stop ()
 		{
+			InitializeResource();
 			accAnimPercent = 0.0f;
 			state = State.Stopped;
 			Animation.Res.Tick (0, GameObj);
@@ -121,14 +126,15 @@ namespace MFEP.Duality.Plugins.Animation
 		private void Animate ()
 		{
 			Percent = GetAnimPercent ();
-			if (Percent >= 1.0)
+			if (Percent >= 1.0) {
 				if (Looping) {
 					while (Percent >= 1.0f)
 						Percent -= 1.0f;
 				} else {
 					IsPlaying = false;
-					return;
+					Percent = 1.0f;
 				}
+			}
 			if (Animation == null) {
 				Log.Core.WriteError ("Animation is missing");
 				return;
