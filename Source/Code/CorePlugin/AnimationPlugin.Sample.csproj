@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="AdvancedSample.cs" />
     <Compile Include="EllipseMovementSample.cs" />
+    <Compile Include="ExampleController.cs" />
     <Compile Include="NoiseMovementSample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CorePlugin.cs" />
@@ -67,6 +68,9 @@
     <Compile Include="PathFollowMovementSample.cs" />
     <Compile Include="LinearMovementSample.cs" />
     <Compile Include="Properties\ResNames.cs" />
+    <Compile Include="ScreenShakeRes.cs" />
+    <Compile Include="StepCmp.cs" />
+    <Compile Include="StepRes.cs" />
     <Compile Include="TrigonometricMovement2DSample.cs" />
     <Compile Include="WritePercentComp.cs" />
   </ItemGroup>
