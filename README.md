@@ -10,9 +10,9 @@ This means, that unlike most animation tools, there are no keyframes or similar 
 Despite it may feel intimidating at first, it enables quick iteration over animation sequences,
 which are difficult to achieve using the keyframe technique.
 
-'Real-world' examples include (these examples are not added to the repo yet):
-* Camera/Screenshake.
-* Movement in a tile-based game.
+'Real-world' examples include:
+* Camera/Screenshake - **included in the Samples package**.
+* Movement in a tile-based game - **included in the Samples package**.
 * Weapon swinging / recoil
 * ...
 
