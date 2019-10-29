@@ -5,6 +5,7 @@ Here are some gifs with source code to showcase the plugin's capabilities.
 <p align="center">
   <img src="http://i.imgur.com/NwtAQ2n.gif" alt="Imgur" />
 </p>
+
 ```csharp
 public class ComplexSample : AnimResource
 {
@@ -33,6 +34,7 @@ public class ComplexSample : AnimResource
 <p align="center">
   <img src="http://i.imgur.com/DhCXJI0.gif" alt="Imgur" />
 </p>
+
 ```csharp
 public class TrigonometricMovement2DSample : AnimResource
 {
@@ -58,6 +60,7 @@ public class TrigonometricMovement2DSample : AnimResource
 <p align="center">
   <img src="http://i.imgur.com/wAK5ute.gif" alt="Imgur" />
 </p>
+
 ```csharp
 public class PathAndColorSample : AnimResource
 {
